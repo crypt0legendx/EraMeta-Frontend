@@ -1,0 +1,651 @@
+.daoBody {
+  background-color: #020a03;
+  text-align: center;
+}
+
+.section-wrapper {
+  position: relative;
+}
+
+.section-side-padding {
+  margin: 30vh 4vw 10vh 4vw;
+}
+
+.listContainer {
+  background-color: rgba(0, 37, 60, 0.5);
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 37, 60, 0.5),
+    rgba(39, 1, 56, 0.5)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  max-width: 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.listTitle {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  margin: 0px 5% 12px 5%;
+}
+
+.titleBottomSeperator {
+  width: 122px;
+  height: 3px;
+  border-radius: 16px;
+  margin: 0px 5% 6px 5%;
+  background: linear-gradient(
+    to bottom right,
+    #2196f3,
+    rgba(39, 1, 56, 1),
+    #18fb9a
+  );
+}
+
+mat-nav-list {
+  background-color: transparent;
+  border-radius: 16px;
+}
+
+mat-list-item {
+  margin: 5% 8px 5% 0px;
+  text-align: left;
+}
+
+mat-nav-list a:hover,
+mat-nav-list a:active {
+  border-radius: 5px;
+  color: #18fb9a;
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+.listIcon {
+  color: rgba(158, 158, 158, 1);
+  height: 22px;
+  width: 22px;
+  margin-right: 16px;
+}
+
+.nav-caption:hover,
+.nav-caption:active {
+  color: #18fb9a;
+}
+
+.jumboTitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.sectionText {
+  text-align: center;
+  font-size: 20px;
+}
+
+.buttonOpenDaoWrapper {
+  margin: 32px auto;
+}
+
+.keySection {
+  margin-bottom: 140px;
+}
+
+.sectionImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 300px;
+  margin-bottom: 120px;
+}
+
+.sectionTitle {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 60px;
+}
+
+.titleSection {
+  margin-bottom: 170px;
+}
+
+.subSectionWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 16px auto;
+}
+
+.subSectionImageWrapper {
+  width: 80px;
+  max-width: 80px;
+  min-width: 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.subSectionImage {
+  width: 64px;
+  height: 64px;
+  object-fit: fill;
+}
+
+.subSectionTextWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.subSectionTitle {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.subSectionDesc {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.overviewSection {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 200px;
+}
+
+.overviewWrapper {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  scroll-behavior: smooth;
+}
+
+.overviewWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.overviewWrapper::-webkit-scrollbar-track {
+  display: none;
+}
+
+.overviewWrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.overview {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.overviewItemWrapper {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overviewImageWrapper {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(180deg, #343638 0%, #18191c 100%),
+    linear-gradient(180deg, #18191c 0%, #252728 100%), #111102;
+  box-shadow: inset 0px -2px 3px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.overviewImageCircle {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6de5d2;
+  border-radius: 90px;
+}
+
+.overviewImage {
+  width: 12px;
+  height: 12px;
+  object-fit: fill;
+}
+
+.overviewTitle {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.overviewDescWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.overviewDescItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 6px 0;
+}
+
+.overviewDescImage {
+  width: 10px;
+  height: 8px;
+  object-fit: cover;
+  margin-top: 8px;
+  margin-right: 11.5px;
+}
+
+.overviewDescText {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+.goalSectionHead {
+  margin-bottom: 64px;
+}
+
+.goalSectionHeadTitle {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.goalSectionHeadText {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+.goalSection {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.goalWrapper {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.goalWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.goalWrapper::-webkit-scrollbar-track {
+  display: none;
+}
+
+.goalWrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.goal {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.goalItemWrapper {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goalItem {
+  width: 85%;
+  height: 500px;
+  background: linear-gradient(180deg, #343638 0%, #18191c 100%);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25), 0px 17px 60px rgba(0, 0, 0, 0.4),
+    inset 0px -2px 3px rgba(0, 0, 0, 0.25),
+    inset 0px 2px 2px rgba(255, 255, 255, 0.28);
+  border-radius: 24px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.goalItemTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.goalItemTitleText {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.goalItemSubTitleText {
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #6de5d2;
+}
+
+.goalItemDivider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 16px 0px;
+}
+
+.goalDescWrapper {
+  flex-grow: 1;
+}
+
+.buttonContributeWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttonContribute {
+  padding: 12px 32px;
+  width: 143px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 40px;
+  color: black;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+.buttonContribute:hover {
+  background: #c0c0c0;
+}
+
+.goalRibbon {
+  position: absolute;
+  width: 130px;
+  height: 70px;
+  right: -20px;
+  top: 32px;
+  padding: 12px;
+  transform: skew(-10deg);
+  border-radius: 10px;
+}
+
+.diamondRibbon {
+  background: linear-gradient(272deg, #6a96bb -41.06%, #c6e7fb 137.71%);
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.goldRibbon {
+  background: linear-gradient(272deg, #6d6541 -41.06%, #eedfb4 137.71%),
+    linear-gradient(94.77deg, #a6eff3 8.79%, #85ccd0 97.85%);
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.silverRibbon {
+  background: linear-gradient(272deg, #c7c6c2 -41.06%, #e3e3e3 137.71%),
+    linear-gradient(94.77deg, #a6eff3 8.79%, #85ccd0 97.85%);
+  box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.goalRibbonTitle {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #525355;
+  width: 100%;
+  text-align: left;
+  transform: skew(10deg);
+}
+
+.goalRibbonSubTitle {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  color: #020a03;
+  width: 100%;
+  text-align: left;
+  transform: skew(10deg);
+  margin-left: 10px;
+}
+
+.moveButton {
+  background: #303235;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25), 0px 17px 60px rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  transition: background 0.5s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.moveButton:hover {
+  background: #18191b;
+}
+
+.moveNextImage {
+  width: 13px;
+  height: 12px;
+  object-fit: cover;
+}
+
+.moveNext {
+  position: absolute;
+  top: 40%;
+  right: 16px;
+}
+
+.movePrev {
+  position: absolute;
+  top: 40%;
+  left: 16px;
+}
+
+.bottomBar {
+  position: absolute;
+  width: 120vw;
+  padding: 40px;
+  left: -10vw;
+  bottom: -20px;
+  background: #6de5d2;
+  transform: rotate(4deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomBarContent {
+  width: 100vw;
+}
+
+.bottomBarContentItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bottomBarContentImage {
+  width: 14px;
+  height: 12px;
+  object-fit: cover;
+  margin-right: 11.5px;
+}
+
+.bottomBarContentText {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: #020a03;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .goal {
+    width: 100%;
+  }
+  .overview {
+    width: 100%;
+  }
+  .moveNext {
+    display: none;
+  }
+  .movePrev {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .goal {
+    width: 1024px;
+  }
+  .overview {
+    width: 1024px;
+  }
+  .moveNext {
+    display: normal;
+  }
+  .movePrev {
+    display: normal;
+  }
+}
+
+@media (min-width: 768px) {
+  .sectionText {
+    margin: 0px 30% 0px 30%;
+  }
+  .goalSectionHeadText {
+    margin: 0px 30% 0px 30%;
+  }
+  .moveNext {
+    display: normal;
+  }
+  .movePrev {
+    display: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumboTitle {
+    font-size: 40px;
+  }
+  .sectionText {
+    font-size: 16px;
+    margin: 0px 5% 0px 5%;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+  .subSectionTitle {
+    font-size: 20px;
+  }
+  .subSectionDesc {
+    font-size: 16px;
+  }
+  .overviewTitle {
+    font-size: 20px;
+  }
+  .goalItemTitleText {
+    font-size: 20px;
+  }
+  .bottomBarContentText {
+    font-size: 14px;
+  }
+  .goalSectionHeadTitle {
+    text-align: left;
+    font-size: 32px;
+  }
+  .goalSectionHeadText {
+    text-align: left;
+    font-size: 16px;
+    margin: 0;
+  }
+}

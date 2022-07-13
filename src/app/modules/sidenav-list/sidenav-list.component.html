@@ -1,0 +1,60 @@
+<mat-nav-list (click)="onSideNavCloseWithParameter($event)" id="containerSideNav">
+  <div class="sideNavContainer" id="sideNav">
+    <a mat-list-item (click)="openBugReportsForm()">
+      <span class="iconify stepSectionIcon" data-icon="ant-design:bug-filled"></span>
+      <span class="nav-caption">Report Bug</span>
+    </a>
+    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="ant-design:home-filled"></span>
+      <span class="nav-caption">Home</span>
+    </a>
+    <a mat-list-item routerLink="/collections" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="ic:round-collections"></span>
+      <span class="nav-caption">Collections</span>
+    </a>
+    <a mat-list-item routerLink="/meta-ventures" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="material-symbols:rocket-launch-rounded"></span>
+      <span class="nav-caption">Meta-Ventures</span>
+    </a>
+    <a mat-list-item routerLink="/dao" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="fa-solid:layer-group"></span>
+      <span class="nav-caption">DAO</span>
+    </a>
+    <a mat-list-item routerLink="/launchpad" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="ic:round-dashboard-customize"></span>
+      <span class="nav-caption">Launch Pad</span>
+    </a>
+    <a mat-list-item routerLink="/about" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="fluent:people-community-28-filled"></span>
+      <span class="nav-caption">About</span>
+    </a>
+    <a mat-list-item routerLink="/faq" (click)="onSidenavClose()">
+      <span class="iconify stepSectionIcon" data-icon="mdi:account-question"></span>
+      <span class="nav-caption">FAQ</span>
+    </a>
+    <a mat-list-item *ngIf="!currentUser">
+      <div fxLayout="row" fxLayoutAlign="start center" class="login-container" (click)="openModal(true)">
+        <span class="nav-caption">Login</span>
+      </div>
+    </a>
+    <a mat-list-item *ngIf="!currentUser">
+      <div fxLayout="row" fxLayoutAlign="start center" class="cta-container" (click)="openModal(false)">
+        <span class="nav-caption cta-text">Signup</span>
+      </div>
+    </a>
+    <a mat-list-item  *ngIf="currentUser">
+      <div routerLink="/dashboard" fxLayout="row" fxLayoutAlign="start center" class="cta-container" (click)="onSidenavClose()">
+        <span class="iconify stepSectionIcon" data-icon="entypo:line-graph"></span>
+        <span class="nav-caption cta-text">Dashboard <span class="detailsText">(alpha)</span></span>
+      </div>
+    </a>
+    <a mat-list-item *ngIf="currentUser">
+      <div routerLink="/profile" fxLayout="row" fxLayoutAlign="start center" (click)="onSidenavClose()" class="ellipsis">
+        <img [src]=currentUser.profileImageURL alt="" class="profileImage">
+        <span class="nav-caption">{{currentUser.username}}</span>
+      </div>
+    </a>
+  </div>
+</mat-nav-list>
+<app-auth-modal [isModalOpen]="isModalOpen" [isLoginForm]="isLoginForm" (closeEvent)="closeModal($event)" (currentUser)="setCurrentUser($event)"></app-auth-modal>
+

@@ -1,0 +1,80 @@
+.selectorModal {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .selectorContainer {
+    justify-content: center;
+    text-align: right;
+    width: 333px;
+    max-width: 80%;
+    max-height: 75%;
+    border-radius: 16px;
+    background-color: rgba(17, 17, 17, 1);
+  }
+
+  .closeModalIcon {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -40px;
+    width: 24px;
+    height: 24px;
+    color: rgba(158, 158, 158, 1);
+    cursor: pointer;
+  }
+
+  .modalTitle {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    margin: 60px 5% 8px 5%; /* Close modalIcon height + some space */
+  }
+
+  ul {
+      text-align: center;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  li {
+    width: 85%;
+    text-align: left;
+    list-style: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    padding: 2.5% 5% 2.5% 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  li:hover {
+      background-color: rgba(56, 56, 56, 1);
+  }
+
+  .walletStatus {
+    font-size: 12px;
+    float: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .downloadText {
+    text-align: center;
+    color: rgba(158, 158, 158, 1);
+    font-size: 16px;
+    margin-bottom: 60px;
+    cursor: pointer;
+  }

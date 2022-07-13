@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico" />
+    <link href="../../../favicon.ico" rel="icon" />
+
+    <title>EraMeta</title>
+  </head>
+
+  <body class="homeBody">
+    <app-new-header></app-new-header>
+
+    <div class="col section-side-padding relative">
+      <div class="top-tint z-0"></div>
+
+      <div class="w-full flex flex-col space-y-5 relative">
+        <h3 class="section-title">A Web3 creator’s hub & tool suite</h3>
+        <p class="section-desc grey">
+          Incubate your next generation metaverse business or launch your NFT in
+          under 5 minutes with EraMeta.
+        </p>
+        <div
+          class="w-full flex flex-row justify-center items-center space-x-4 section-margin-bottom"
+        >
+          <button class="buttonPrimary">Meta-Ventures</button>
+          <button class="buttonSecondary">Launch Pad</button>
+        </div>
+        <div class="flex justify-center items-center relative">
+          <div class="tip-partner">
+            <div
+              class="flex flex-col justify-center items-start space-y-2 -rotate-4"
+            >
+              <p class="tip-text text-left">
+                // Our line of<br />
+                trusted partners
+              </p>
+              <img
+                class="tip-arrow"
+                src="../../../assets/images/arch_arrow.svg"
+              />
+            </div>
+          </div>
+          <img
+            class="image-key-gallery z-20"
+            src="../../../assets/images/key_gallery.png"
+          />
+          <div class="bottomBar z-10">
+            <div
+              class="w-screen row flex flex-row space-x-5 justify-center items-center"
+            >
+              <img
+                class="componyLogo"
+                src="../../../assets/images/blockasset.svg"
+              />
+              <img
+                class="componyLogo"
+                src="../../../assets/images/crossmint.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full flex flex-col justify-center items-start relative rise-section"
+        >
+          <h3 class="sub-section-title">
+            How EraMeta is raising the standard?
+          </h3>
+          <p class="sub-section-desc">
+            Tailored metaverse solutions for your real-life business model.
+            Launch an NFT and own your own storefront.
+          </p>
+          <div class="tip-rise">
+            <div class="flex flex-col justify-center items-end rotate-4">
+              <p class="tip-text text-left">
+                // Why top Web3 creators <br />bet on EraMeta
+              </p>
+              <img
+                class="tip-arrow flip-horizontally"
+                src="../../../assets/images/arch_arrow.svg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="riseSection">
+          <div #widgetRise class="riseWrapper" (scroll)="onScrollRiseSection()">
+            <div class="rise">
+              <div class="riseItemWrapper">
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-group.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Funded DAO</h3>
+                  <p class="riseDescText">
+                    Decisions are influenced by EraMeta DAO members. We are for
+                    the community, by the community. Over 250K invested for
+                    members pre launch.
+                  </p>
+                </div>
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-shield.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Verified NFTs</h3>
+                  <p class="riseDescText">
+                    Every EraMeta Original is evaluated using our curated
+                    7-factor EraMeta quality check, developed by our in-house
+                    NFT experts.
+                  </p>
+                </div>
+              </div>
+              <div class="riseItemWrapper">
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-chart.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Meta-Ventures</h3>
+                  <p class="riseDescText">
+                    Taking real-life business models and developing metaverse
+                    solutions & infrastructure for them. 10% of profits are
+                    gifted to DAO members.
+                  </p>
+                </div>
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-curlybrace.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Web3 Innovation</h3>
+                  <p class="riseDescText">
+                    We are here to build, build and never stop building. Let’s
+                    bring web3 & decentralized apps mainstream through useful
+                    innovations.
+                  </p>
+                </div>
+              </div>
+              <div class="riseItemWrapper">
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-rocket.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Launch Pad</h3>
+                  <p class="riseDescText">
+                    Your branded web3 storefront anywhere, anytime. The EraMeta
+                    launch pad is engineered for creators. 50% of profits gifted
+                    to DAO members.
+                  </p>
+                </div>
+                <div class="riseItem">
+                  <div class="riseImageWrapper">
+                    <div class="riseImageCircle">
+                      <img
+                        class="riseImage"
+                        src="../../../assets/icons/icon-infinite.svg"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="riseTitle">Longevity</h3>
+                  <p class="riseDescText">
+                    We are a decentralized organization that will be here for
+                    decades to come. Profits reinvested, always in growth mode.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="moveButton moveNext"
+            (click)="scrollRightRise()"
+            *ngIf="!rightScrollRiseDisabled"
+          >
+            <img
+              class="moveNextImage"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+          <button
+            class="moveButton movePrev"
+            (click)="scrollLeftRise()"
+            *ngIf="!leftScrollRiseDisabled"
+          >
+            <img
+              class="moveNextImage flip-horizontally"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+        </div>
+
+        <div class="launchpad-section relative z-10">
+          <h3 class="sub-section-title">Launch Pad</h3>
+          <div class="launchpad-section-title">
+            <p class="sub-section-desc">
+              Your branded web3 storefront anywhere, anytime. The EraMeta launch
+              pad is engineered for creators. 50% of profits gifted to DAO
+              members.
+            </p>
+            <div class="launchpad-section-title-buttons">
+              <button class="buttonPrimary m-1">Launch My Collection</button>
+              <button class="buttonSecondary m-1">Learn more</button>
+            </div>
+          </div>
+          <div class="tip-launchpad">
+            <div class="tip-launchpad-content">
+              <p class="tip-text text-left">
+                // Why top Web3 creators <br />bet on EraMeta
+              </p>
+              <img
+                class="tip-arrow tip-launchpad-arrow"
+                src="../../../assets/images/arch_arrow.svg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="launchpadSection">
+          <div
+            #widgetLaunchpad
+            class="launchpadWrapper"
+            (scroll)="onScrollLaunchpadSection()"
+          >
+            <div class="launchpad">
+              <div class="launchpadItemWrapper">
+                <div class="launchpadItem">
+                  <div class="launchpadImageWrapper">
+                    <img
+                      class="launchpadImage"
+                      src="../../../assets/icons/icon-magic.png"
+                    />
+                  </div>
+                  <h3 class="riseTitle">Fully automated process</h3>
+                  <p class="riseDescText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                </div>
+              </div>
+              <div class="launchpadItemWrapper">
+                <div class="launchpadItem">
+                  <div class="launchpadImageWrapper">
+                    <img
+                      class="launchpadImage"
+                      src="../../../assets/icons/icon-clipboard.png"
+                    />
+                  </div>
+                  <h3 class="riseTitle">Drag & drop dashboard</h3>
+                  <p class="riseDescText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                </div>
+              </div>
+              <div class="launchpadItemWrapper">
+                <div class="launchpadItem">
+                  <div class="launchpadImageWrapper">
+                    <img
+                      class="launchpadImage"
+                      src="../../../assets/icons/icon-doc.png"
+                    />
+                  </div>
+                  <h3 class="riseTitle">Custom smart contracts</h3>
+                  <p class="riseDescText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                </div>
+              </div>
+              <div class="launchpadItemWrapper">
+                <div class="launchpadItem">
+                  <div class="launchpadImageWrapper">
+                    <img
+                      class="launchpadImage"
+                      src="../../../assets/icons/icon-chat.png"
+                    />
+                  </div>
+                  <h3 class="riseTitle">24/7 assigned support</h3>
+                  <p class="riseDescText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="moveButton moveNextLaunchpad"
+            (click)="scrollRightLaunchpad()"
+            *ngIf="!rightScrollLaunchpadDisabled"
+          >
+            <img
+              class="moveNextImage"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+          <button
+            class="moveButton movePrevLaunchpad"
+            (click)="scrollLeftLaunchpad()"
+            *ngIf="!leftScrollLaunchpadDisabled"
+          >
+            <img
+              class="moveNextImage flip-horizontally"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+        </div>
+
+        <div
+          class="w-full flex flex-col space-y-5 justify-center items-center original-section z-10"
+        >
+          <h3 class="sub-section-title text-center">EraMeta Originals</h3>
+          <p class="sub-section-desc text-center">
+            Exclusively released NFTs by trusted authors.
+          </p>
+          <button class="buttonPrimary">View all Originals</button>
+        </div>
+
+        <div class="originalSection">
+          <div
+            #widgetOriginal
+            class="originalWrapper"
+            (scroll)="onScrollOriginalSection()"
+          >
+            <div class="original space-x-4">
+              <div
+                class="originalItemWrapper"
+                *ngFor="let nftCollection of nftCollections"
+              >
+                <div class="originalItem">
+                  <div class="originalItemHead">
+                    <img
+                      class="originalItemImage"
+                      [src]="nftCollection.image"
+                    />
+                    <p class="originalItemName">// {{ nftCollection.name }}</p>
+                    <p class="originalItemCreator">
+                      &nbsp;&nbsp;&nbsp;by {{ nftCollection.creator }}
+                    </p>
+                  </div>
+                  <div
+                    class="flex flex-row justify-between items-center originalItemBody"
+                  >
+                    <div
+                      class="flex flex-row space-x-2 justify-center items-center originalItemSocial"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="13"
+                        height="13"
+                        fill="currentColor"
+                        class="bi bi-twitter"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                        />
+                      </svg>
+                      <span>TWITTER</span>
+                    </div>
+                    <button class="buttonThird">
+                      <span>view collection</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="9"
+                        height="9"
+                        fill="currentColor"
+                        class="bi bi-arrow-up-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="moveButton moveNext"
+            (click)="scrollRightOriginal()"
+            *ngIf="!rightScrollOriginalDisabled"
+          >
+            <img
+              class="moveNextImage"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+          <button
+            class="moveButton movePrev"
+            (click)="scrollLeftOriginal()"
+            *ngIf="!leftScrollOriginalDisabled"
+          >
+            <img
+              class="moveNextImage flip-horizontally"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+        </div>
+
+        <div class="metaVentureSection relative">
+          <div>
+            <h3 class="sub-section-title">Meta-Ventures</h3>
+            <div class="launchpad-section-title">
+              <p class="venture-desc">
+                We take your real-life business model and transform it for the decentralized world. This is your chance to tap into a new market with our curated metaverse solutions, made for brands looking to establish a Web3 presence.
+              </p>
+              <div class="launchpad-section-title-buttons">
+                <button class="buttonSecondary m-1">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-metaVenture">
+            <div class="tip-metaVenture-content">
+                <p class="tip-text text-left">
+                  // Experience the Power of <br />Decentralization
+                </p>
+                <img
+                  class="tip-metaVenture-arrow"
+                  src="../../../assets/images/ventures/arrow.svg"
+                />
+            </div>
+            <img class="tip-metaVenture-image" src="../../../assets/images/ventures/memory_cards.png" />
+          </div>
+        </div>
+        <div class="metaVentureSection">
+          <div
+            class="metaVentureWrapper"
+          >
+            <div class="metaVenture">
+              <div class="metaVentureItemWrapper">
+                <div class="metaVentureItem">
+                  <div class="metaVentureImageWrapper">
+                    <img
+                      class="metaVentureImage"
+                      src="../../../assets/icons/icon-user.png"
+                    />
+                  </div>
+                  <h3 class="metaVentureItemTitle">Immerse end users in your custom experience</h3>
+                </div>
+              </div>
+              <div class="metaVentureItemWrapper space-item"></div>
+              <div class="metaVentureItemWrapper">
+                <div class="metaVentureItem">
+                  <div class="metaVentureImageWrapper">
+                    <img
+                      class="metaVentureImage"
+                      src="../../../assets/icons/icon-collection.png"
+                    />
+                  </div>
+                  <h3 class="metaVentureItemTitle">Offer unique collectibles users can own & trade</h3>
+                </div>
+              </div>
+              <div class="metaVentureItemWrapper">
+                <div class="metaVentureItem">
+                  <div class="metaVentureImageWrapper">
+                    <img
+                      class="metaVentureImage"
+                      src="../../../assets/icons/icon-decentral.png"
+                    />
+                  </div>
+                  <h3 class="metaVentureItemTitle">Go bigger & faster with the power of decentralization</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tip-metaVenture small">
+            <div class="tip-metaVenture-content">
+                <p class="tip-text text-left">
+                  // Experience the Power of <br />Decentralization
+                </p>
+                <img
+                  class="tip-metaVenture-arrow"
+                  src="../../../assets/images/ventures/arrow.svg"
+                />
+            </div>
+            <img class="tip-metaVenture-image" src="../../../assets/images/ventures/memory_cards.png" />
+          </div>
+
+        </div>
+
+        <div class="daoSection">
+          <div class="goalSectionHead space-y-5">
+            <p class="goalSectionSubTitle">// Experience the power of decentralization</p>
+            <h3 class="goalSectionHeadTitle">Come Build with the EraMeta DAO</h3>
+            <p class="goalSectionDesc grey">
+              EraMeta DAO is a collection of NFT’s, cpmprised by 3D animated artwork.
+              The collection contains 10 diamond keys, 100 gold keys, and 3000 silver keys.
+            </p>
+            <div
+              class="w-full flex flex-row goalSectionTitleButtons items-center space-x-4"
+            >
+              <button class="buttonPrimary">Open DAO</button>
+              <button class="buttonSecondary">Learn more</button>
+            </div>
+          </div>
+
+          <div class="goalSection z-20">
+            <div
+              #widgetDAO
+              class="goalWrapper"
+              (scroll)="onScrollDAOSection()"
+            >
+              <div class="goal">
+                <div class="goalItemWrapper">
+                  <div class="goalItem">
+                    <div class="goalRibbon diamondRibbon">
+                      <p class="goalRibbonTitle">DIAMOND KEYS</p>
+                      <p class="goalRibbonSubTitle">10</p>
+                    </div>
+                    <div class="goalItemTitleWrapper">
+                      <h3 class="goalItemTitleText">The Committee</h3>
+                      <p class="goalItemSubTitleText">// BENEFITS</p>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="goalDescWrapper">
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          25% higher profit distribution from lunchpad
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">DAO votes are worth 100</p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Separate 5% share in metaventure profits
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Whitelist to any EraMeta Original
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Frequent private meetings with each member
+                        </p>
+                      </div>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="buttonContributeWrapper">
+                      <button class="buttonContribute">Contribute</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goalItemWrapper">
+                  <div class="goalItem">
+                    <div class="goalRibbon goldRibbon">
+                      <p class="goalRibbonTitle">GOLD KEYS</p>
+                      <p class="goalRibbonSubTitle">100</p>
+                    </div>
+                    <div class="goalItemTitleWrapper">
+                      <h3 class="goalItemTitleText">Board Directors</h3>
+                      <p class="goalItemSubTitleText">// BENEFITS</p>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="goalDescWrapper">
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          15% higher profit distribution from lunchpad
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">DAO votes are worth 10</p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Whitelist to any EraMeta Original
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Ability to speak in weekly board meetings
+                        </p>
+                      </div>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="buttonContributeWrapper">
+                      <button class="buttonContribute">Contribute</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="goalItemWrapper">
+                  <div class="goalItem">
+                    <div class="goalRibbon silverRibbon">
+                      <p class="goalRibbonTitle">SILVER KEYS</p>
+                      <p class="goalRibbonSubTitle">3000</p>
+                    </div>
+                    <div class="goalItemTitleWrapper">
+                      <h3 class="goalItemTitleText">The Executives</h3>
+                      <p class="goalItemSubTitleText">// BENEFITS</p>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="goalDescWrapper">
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Share in profits from the launchpad and metaventures
+                        </p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">DAO votes are worth 1</p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">Reduced launchpad price</p>
+                      </div>
+                      <div class="overviewDescItem">
+                        <img
+                          class="overviewDescImage"
+                          src="../../../assets/icons/icon-check-blue.svg"
+                        />
+                        <p class="overviewDescText">
+                          Ability to listen-in on weekly board meetings
+                        </p>
+                      </div>
+                    </div>
+                    <div class="goalItemDivider"></div>
+                    <div class="buttonContributeWrapper">
+                      <button class="buttonContribute">Contribute</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="moveButton moveNext"
+              (click)="scrollRightDAO()"
+              *ngIf="!rightScrollDAODisabled"
+            >
+              <img
+                class="moveNextImage"
+                src="../../../assets/icons/icon-rightarrow.svg"
+              />
+            </button>
+            <button
+              class="moveButton movePrev"
+              (click)="scrollLeftDAO()"
+              *ngIf="!leftScrollDAODisabled"
+            >
+              <img
+                class="moveNextImage flip-horizontally"
+                src="../../../assets/icons/icon-rightarrow.svg"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="bottomBar leftBar z-10">
+          <div class="bottomBarContent row">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Revenue Sharing</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Real Partnerships</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Voting Permissions</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Fund Management</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Land Management</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+              <img
+                class="bottomBarContentImage"
+                src="../../../assets/icons/icon-check-black.svg"
+              />
+              <p class="bottomBarContentText">Metaverse Builds</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-tint z-0"></div>
+      </div>
+      <div class="teamSection flex flex-col space-y-5">
+        <h3 class="sub-section-title">Meet the Team</h3>
+        <div
+            #widgetTeam
+            class="teamWrapper"
+            (scroll)="onScrollTeamSection()"
+          >
+            <div class="team space-x-4">
+              <div
+                class="teamItemWrapper"
+                *ngFor="let member of teamMembers"
+              >
+                <div class="teamItem">
+                  <div class="teamItemHead">
+                    <img
+                      class="teamItemImage"
+                      [src]="member.image"
+                    />
+                    <p class="teamItemName">{{ member.name }}</p>
+                    <p class="teamItemRole">
+                      // {{ member.role }}
+                    </p>
+
+                    <div
+                      class="flex flex-row space-x-4 justify-center items-center teamItemSocial"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                      </svg>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="currentColor">
+                        <path d="M3.78335 2.16652C3.78313 2.60855 3.60732 3.03239 3.2946 3.34479C2.98188 3.6572 2.55787 3.83258 2.11585 3.83236C1.67382 3.83214 1.24998 3.65633 0.937578 3.34361C0.625174 3.0309 0.449791 2.60688 0.450012 2.16486C0.450233 1.72283 0.62604 1.29899 0.938757 0.98659C1.25147 0.674185 1.67548 0.498803 2.11751 0.499024C2.55954 0.499245 2.98338 0.675051 3.29578 0.987768C3.60818 1.30049 3.78357 1.7245 3.78335 2.16652V2.16652ZM3.83335 5.06652H0.500012V15.4999H3.83335V5.06652ZM9.10001 5.06652H5.78335V15.4999H9.06668V10.0249C9.06668 6.97486 13.0417 6.69152 13.0417 10.0249V15.4999H16.3333V8.89152C16.3333 3.74986 10.45 3.94152 9.06668 6.46652L9.10001 5.06652V5.06652Z"/>
+                      </svg>
+                    </div>
+
+                  </div>
+                  <div
+                    class="flex flex-row justify-between items-center teamItemBody"
+                  >
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="moveButton moveNextTeam"
+            (click)="scrollRightTeam()"
+            *ngIf="!rightScrollTeamDisabled"
+          >
+            <img
+              class="moveNextImage"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+          <button
+            class="moveButton movePrevTeam"
+            (click)="scrollLeftTeam()"
+            *ngIf="!leftScrollTeamDisabled"
+          >
+            <img
+              class="moveNextImage flip-horizontally"
+              src="../../../assets/icons/icon-rightarrow.svg"
+            />
+          </button>
+
+      </div>
+
+    </div>
+
+    <app-new-footer></app-new-footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        type();
+        enableProdMode();
+      });
+    </script>
+  </body>
+</html>

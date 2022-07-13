@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+
+<body class="dropsBody">
+  <div class="row section-side-padding">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+      <h3 class="jumboTitle-left">EraMeta Originals</h3>
+      <div class="titleBottomSeperator"></div>
+
+      <mat-tab-group animationDuration="1000ms" [selectedIndex]="0" [dynamicHeight]="true">
+        <mat-tab label="All Originals">
+          <div class="originalsTabContainer">
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngFor="let collection of this.allOriginalCollections">
+
+              <div (click)="openOriginalsCollection(collection.title)" class="collectionContainer">
+                <img [src]="collection.profileImage" alt=""/>
+                <div class="collectionInfoContainer">
+                  <h3 class="collectionTitle white">{{collection.title}}</h3>
+                  <p class="collectionBio grey">{{collection.description}}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="1 of 1s">
+          <div class="originalsTabContainer">
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" *ngFor="let collection of this.oneOfOneCollections">
+
+              <div (click)="openOriginalsCollection(collection.title)" class="collectionContainer">
+                <img [src]="collection.profileImage" alt=""/>
+                <div class="collectionInfoContainer">
+                  <h3 class="collectionTitle white">{{collection.title}}</h3>
+                  <p class="collectionBio grey">{{collection.description}}</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+    </div>
+  </div>
+<app-footer></app-footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+</body>
+</html>

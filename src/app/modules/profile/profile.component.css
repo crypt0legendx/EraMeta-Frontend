@@ -1,0 +1,147 @@
+app-profile {
+  background-color: black;
+}
+
+.headerRow {
+    height: 25vh;
+    background: linear-gradient(to bottom right, black, #270138, #270138, rgba(26, 26, 26, 0.5), #00253C, #270138, transparent, black),
+              url('https://grainy-gradients.vercel.app/noise.svg');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRo23y_Xg8Wo0JLUiLWV_MCM4bhbWCo7Umcg&usqp=CAU');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    overflow: hidden;
+}
+
+.userProfileInfoRow {
+    text-align: center;
+    padding-top: 8vh;
+}
+
+.userInfoContainer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 333px;
+    background-color: rgba(26, 26, 26, 1);
+    border-radius: 16px;
+    margin-top: -20vh;
+    padding: 5%;
+}
+
+.logoutButton {
+    text-align: center;
+    width: 100%;
+    font-size: min(3.33vw, 18px);
+    color: rgba(255, 32, 31, 0.8);
+    cursor: pointer;
+}
+
+.editButton {
+    text-align: center;
+    width: 100%;
+    font-size: min(3.33vw, 18px);
+    color: rgba(158, 158, 158, 1);
+    cursor: pointer;
+}
+
+.profileImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.sectionTitle {
+  margin-top: 20px;
+  text-align: left;
+  font-size: min(4vw, 24px);
+  color: rgba(255, 255, 255, 1);
+  opacity: 1;
+}
+
+.sectionText {
+  text-align: left;
+  font-size: min(3.33vw, 18px);
+  opacity: 1;
+}
+
+.toggleContainer {
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.toggleTitleButton {
+  height: 100%;
+  width: 100%;
+  padding: 5% 5% 5% 5%;
+  text-align: left;
+  font-size: min(3vw, 14px);
+  background-color: rgba(26, 26, 26, 1);
+  color: rgba(255, 255, 255, 1);
+  border: 0.5px solid rgba(26, 26, 26, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  line-height: 1.25;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.toggleTitleButton:active {
+    transform: translateY(4px);
+}
+
+#toggle1 {
+    color: #18FB9A;
+    border-bottom: 1px solid #18FB9A;
+}
+
+.filteredContentContainer {
+    text-align: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-top: 4vh;
+    min-height: 50vh;
+    width: 100%;
+}
+
+.noResultsText {
+    padding-top: 75px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: min(3vw, 14px);
+    color: #18FB9A;
+    z-index: 50;
+}
+
+.loadingIndicator {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 51; /* 1 more than noResultsText */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+  }
+
+  .loadingIndicator img {
+    height: 100px;
+    width: 100px;
+    margin-top: 38px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 16px;
+  }
+
+@media(max-width: 768px) {
+    .userInfoContainer {
+        max-width: none;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .profileToggleSection {
+        padding-top: 6vh;
+    }
+}

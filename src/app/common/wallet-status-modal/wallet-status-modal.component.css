@@ -1,0 +1,30 @@
+.statusModal {
+    position: absolute;
+    bottom: 3vh;
+    left: 3vh;
+    padding: 12px 18px 12px 18px;
+    background-color: rgba(26, 26, 26, 1);
+    border: 2px solid #18FB9A;
+    border-radius: 16px;
+    z-index: 1;
+}
+
+p {
+    text-align: left;
+    margin-bottom: 0px;
+    color: rgba(158, 158, 158, 1);
+    font-size: 12px;
+}
+
+.disconnect {
+    margin-top: 8px;
+    margin-left: 66px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .statusModal {
+        display: none;
+    }
+}

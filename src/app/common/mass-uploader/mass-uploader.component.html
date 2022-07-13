@@ -1,0 +1,27 @@
+<div
+     #dropZone class="dropzone"
+     dropzone
+     (hovered)="toggleHover($event)"
+     (dropped)="onDrop($event)"
+     [class.hovering]="isHovering">
+</div>
+
+<h3 class="layersTitle">
+    Total layers: {{fileDownloadsURLs.size}}
+    <span *ngIf="didEditLayers" (click)="saveLayersToMemory()" class="saveLayers green">Save new layers</span>
+</h3>
+<div class="dropperFilesContainer">
+    <div class="row">
+        <div *ngFor="let file of fileDownloadsURLs | keyvalue" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="fileInfoContainer">
+                <div class="imgDiv" [style.background-image]="'url(' + file.key + ')'"></div>
+                <div class="infoDiv">
+                    <h3>{{file.value.name}}</h3>
+                    <div (click)="deleteLayer(file.key)">
+                        <span  class="iconify trashIcon" data-icon="ion:trash-bin"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.dropsBody {
+  background-color: black;
+  object-fit: center;
+}
+
+.pageTitleContainer {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 12%;
+  margin-bottom: 7.5%;
+}
+
+.pageTitle {
+  background: linear-gradient(to right, #FFFF00, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: max(3.5vw, 28px);
+}
+
+@media (max-width: 768px) {
+  .pageTitleContainer {
+    margin-top: 18%;
+  }
+}
+
+.dropContainer {
+  text-align: center;
+  align-items: center;
+  position: relative;
+  border: 4px solid grey;
+  margin-bottom: 25px;
+}
+
+.dropContainer:hover {
+  border-image: linear-gradient(to right, #FFFF00, #008080) 2;
+}
+
+.dropImage {
+  display: flex;
+  border-radius: 5px;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 80%;
+}
+
+.dropInfoContainer {
+    background-color: rgba(26, 26, 26, 1);
+    padding: 8px 4px;
+    position: relative;
+    width: 70%;
+    height: 115px;
+    overflow: hidden;
+    margin: -2.5em auto 20px;
+    border: 0.5px solid rgba(192, 192, 192, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropInfoTitle {
+  color: white;
+  text-align: center;
+  font-size: max(0.75vw, 14px);
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.dropContainer:hover .dropInfoTitle {
+  background: linear-gradient(to right, #FFFF00, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dropImageTitle {
+  text-align: left;
+  width: 80%;
+  color: #6d6d64;
+  font-size: min(3.5vw, 18px);
+}
+
+.pText {
+  text-align: center;
+  line-height: 14px;
+  font-size: min(2.6vw, 10px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0px;
+}
+
+.fttr {
+  margin-top: 5%;
+  color: white;
+}
+
+/////// BELOW IS LISTED DROP ///////
+
+
+.headerImageContainer {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropHeaderImage {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+  margin-top: 7%;
+}
+
+.dropHeroContainer {
+    background-color: rgba(26, 26, 26, 1);
+    padding: 8px 4px;
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    margin: -2.5em auto 20px;
+    border: 0.5px solid rgba(192, 192, 192, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropTitle {
+  color: white;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  background: linear-gradient(to right, #FFFF00, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: min(4.75vw, 28px);
+}
+
+.artistTag {
+  color: white;
+  background: linear-gradient(to right, #FFFF00, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: min(2.75vw, 14px);
+}
+
+.dropSubTitle {
+  text-align: center;
+  max-height: 58px;
+  line-height: 14px;
+  font-size: min(2.75vw, 14px);
+  color: rgba(255, 255, 255, 0.66);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0px;
+}
+
+.dropSubSubTitle {
+  text-align: center;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: min(2.25vw, 14px)
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: none;
+}
+
+.toggleButton:hover {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.toggleButtonText {
+  color: rgba(255, 255, 255, 0.66);
+  font-weight: 600;
+}
+
+.toggleButtonText:hover {
+  color: #008080;
+}
+
+.dropOptionsContainer {
+  width: 100%;
+  margin-top: -8px;
+  text-align: center;
+}
+
+.fa-icon, .iconify {
+  color: rgba(255, 255, 255, 0.66);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 32px;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.iconify:hover {
+  text-decoration: none;
+  color: #008080;
+  height: 24px;
+  width: 24px;
+  transition: 0.15s ease;
+}
+
+.iconify:active {
+  transform: translateY(4px);
+}
+
+.PCDropCollectionTitle {
+  color: white;
+  background: linear-gradient(to right, #FFFF00, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-size: min(4.75vw, 28px);
+}
+
+.mintInfoTitle {
+  text-align: left;
+  margin-top: -12px;
+  color: rgba(255, 255, 255, 0.8);
+  /* font-size: max(0.66vw, 12px); */
+  font-size: min(2.75vw, 14px);
+}
+
+.solTitleLogo {
+  height: max(18px, 1.5vw);
+  width: max(18px, 1.5vw);
+  margin-bottom: 1px;
+}
+
+.listedDropItemContainer {
+  text-align: center;
+  align-items: center;
+  margin-top: 25px;
+  border: 4px solid;
+  border-radius: 16px;
+  background-color: rgba(26, 26, 26, 1);
+}
+
+.listedDropItemContainer:hover {
+  border-image: linear-gradient(to right, #FFFF00, #008080) 2;
+}
+
+.listedDropItemImage {
+  width: 80%;
+  margin-top: 10%;
+  border-radius: 5px;
+}
+
+.listedDropItemDetailsContainer {
+  height: 100px;
+  margin-left: 10%
+}
+
+.listedDropItemRarity {
+  text-align: left;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.66);
+  font-weight: 600;
+}
+
+.listedDropItemTitle {
+  text-align: left;
+  margin-top: -12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: min(3.5vw, 18px)
+}
+
+.listedDropItemPrice {
+  text-align: left;
+  margin-top: -15px;
+  color: rgba(255, 255, 255, 0.66);
+  font-weight: 800;
+}
+
+.gangPlanLB {
+  text-align: center;
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none
+}
+
+.gangPlanLB.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.gangPlanIMG {
+  border-radius: 5px;
+  max-height: 80%;
+  max-width: 90%;
+}
+
+.SOL {
+  height: 14px;
+  width: 14px;
+  margin-bottom: 1px;
+}
+
+.lightBoxItem {
+  border-radius: 5px;
+}
+
+.lightBoxItem:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* #lightBox {  //Had to restyle in src/assets/js/drops.js
+  text-align: center;
+  position: fixed;
+  z-index: 1000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none
+}
+
+#lightBox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#lightBox img { //Had to restyle in src/assets/js/drops.js
+  justify-content: center;
+  text-align: center;
+  max-width: 80%;
+  max-height: 75%;
+  border-radius: 5px;
+} */

@@ -1,0 +1,205 @@
+.footerContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 4vw 0 4vw;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftContent {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.imageLogo {
+  width: 124px;
+  height: 20px;
+  object-fit: fill;
+}
+
+.socialsWrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.socialTitle {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: #6de5d2;
+  border: solid 1px #303235;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.socialButton:hover {
+  background: #6de5d2;
+  border: solid 2px #6de5d2;
+  color: white;
+}
+
+.rightContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contentTitle {
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contentDesc {
+  width: 100%;
+  text-align: left;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribeForm {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 44px;
+  overflow: hidden;
+  padding: 8px;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribeEmail {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: black;
+  border: 0;
+  padding: 0;
+  margin-left: 20px;
+  outline: 0;
+  flex-grow: 1;
+  background: transparent;
+  text-align: left;
+}
+
+.subscribeText {
+  text-decoration: none;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 0px;
+  margin: 80px auto 20px auto;
+  border: 1px solid #303235;
+}
+
+.licenseContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.licenseContent {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    height: auto;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rightContent {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .imageLogo {
+    margin-bottom: 40px;
+  }
+  .contentDesc {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .socialsWrapper {
+    align-items: center;
+  }
+  .licenseContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,115 @@
+.dashboardBody {
+    background-color: rgba(18, 18, 18, 1);
+    text-align: center;
+}
+
+.section-padding {
+    padding: 10vh 0vw 10vh 0vw;
+}
+
+.centeringContainer {
+    text-align: center;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.centeredContainer {
+    background-color: rgba(26, 26, 26, 1);
+    padding: 60px 5% 60px 5%;
+    border-radius: 16px;
+}
+
+.jumboTitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: min(10vw, 42px);
+    font-weight: 550;
+    line-height: 1.25;
+    margin: 0px 5% 12px 5%;
+}
+
+.subTitle {
+    text-align: center;
+    margin-top: -12px;
+}
+
+.newCollectionContainer {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    background-color: transparent;
+    margin-top: 10%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.plusContainer {
+    width: 100%;
+    text-align: center;
+    /* (28 + 6 + 0 ) / 2 = 17 */
+    margin-top: 17px; /* move down by 32px to take collectionTitle height (64px) into account when centering */
+}
+
+.plusContainer .iconify {
+    height: 88px;
+    width: 88px;
+    cursor: pointer;
+    color: #9845FF;
+    opacity: 0.66;
+}
+
+.plusContainerText {
+    text-align: center;
+    margin: 0px;
+    padding: 8px 0px 0px 0px;
+}
+
+.collectionContainer {
+    margin-top: 10%;
+    width: 100%;
+    padding: 5%;
+    border-radius: 16px;
+    background-color: #9845FF;
+    background-image: linear-gradient(to bottom right, rgba(0, 37, 60, 0.8), rgba(39, 1, 56, 0.8));
+    cursor: pointer;
+}
+
+.collectionContainer:hover, .collectionContainer:active,
+.newCollectionContainer:hover, .newCollectionContainer:active {
+    opacity: 0.66;
+}
+
+.collectionProfileImage {
+    width: 100%;
+    border-radius: 14px;
+    object-position: center;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.collectionTitle {
+    text-align: center;
+    margin: 0px;
+    padding: 6px 0px 0px 0px;
+    height: 28px;
+    line-height: 1.25;
+    vertical-align: middle;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.collectionTitle::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+    border-radius: 8px;
+}
+  
+.collectionTitle::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+  
+.collectionTitle::-webkit-scrollbar-thumb {
+    background-color: #49494d;
+    border-radius: 16px;
+}

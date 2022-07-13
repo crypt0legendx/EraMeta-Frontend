@@ -1,0 +1,345 @@
+.launchpadBody {
+  background-color: rgba(18, 18, 18, 1);
+  text-align: center;
+}
+
+.topRow {
+  background-color: #3d0100;
+  background: url("https://i.imgur.com/Ukoa7JD.gif?noredirect");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  overflow: hidden;
+  height: 66vh;
+  width: 100vw;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.topRowDiv {
+  padding-top: 20vh;
+}
+
+.jumboTitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 0px;
+}
+
+.jumboSubTitle {
+  margin-top: -6px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.topRowDiv button {
+  margin-top: 30px;
+}
+
+.web3Button {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 533;
+  background-color: rgba(26, 26, 26, 1);
+  background-image: none;
+  border: 2px solid #18FB9A;
+}
+
+.web3Button:active {
+  color: rgba(26, 26, 26, 1);
+  background-image: linear-gradient(to right, #9845FF, #18FB9A);
+  border: 2px solid rgba(26, 26, 26, 1);
+}
+
+.section-padding {
+  padding: 10vh 0vw 10vh 0vw;
+}
+
+.pad-top {
+  padding-top: 40px;
+}
+
+.bottomSectionSeperator {
+  height: 2px;
+  width: 75%;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  margin-top: 20px;
+  margin-left: 12.5%;
+}
+
+.stepSectionContainer {
+  padding: 16px 16px 0px 16px;
+  margin: 0px;
+  margin-top: 10%;
+  border-radius: 16px;
+}
+
+.sectionTitle-center {
+  text-align: center;
+  font-size: 22px;
+}
+
+.sectionTitle-left {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 22px;
+}
+
+.sectionTitle-left-bold {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.sectionNumberTitle-left {
+  text-align: left;
+  font-size: 28px;
+  margin: 0px;
+  margin-left: 25%;
+}
+
+.sectionText-center {
+  text-align: center;
+  font-size: 18px;
+  opacity: 1;
+}
+
+.sectionText-left {
+  text-align: left;
+  font-size: 16px;
+  opacity: 1;
+}
+
+.sectionText-left-bold {
+  text-align: left;
+  font-size: 16px;
+  opacity: 1;
+  font-weight: 500;
+}
+
+.stepIconContainer {
+  text-align: center;
+}
+
+.stepSectionIcon {
+  opacity: 1;
+  height: 42px;
+  width: 42px;
+  margin-bottom: 10px;
+}
+
+.colorfulRow {
+  text-align: center;
+  /* background-image: url('https://www.publicdomainpictures.net/pictures/150000/t2/banner-header-tapete-1450520058Odj.jpg'); */
+  background-image: linear-gradient(to right, #00253C, #270138);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.greenBorderSection {
+  border: 2px solid #18FB9A;
+  border-radius: 16px;
+  padding: 8px;
+  margin-bottom: 5%;
+  line-height: 0;
+}
+
+.greenBorderText {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(3vw, 16px);
+  opacity: 1;
+  margin-bottom: 0; /* Cancel global margin-bottom: 20px; */
+}
+
+.greenIcon {
+  color: #18FB9A;
+  position: absolute;
+  float: right;
+  left: 24px;
+  top: 0.5rem;
+  height: 22px;
+  width: 22px;
+  opacity: 1;
+}
+
+@media(max-width: 992px) {
+  .greenIcon {
+    left: 4%;
+    top: 0.5rem;
+    height: 22px;
+    width: 22px;
+  }
+}
+
+@media(max-width: 768px) {
+  .jumboTitle {
+    font-size: 28px;
+  }
+  .ctaButton {
+    padding-top: 12px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+  }
+}
+
+@media(max-width: 566px) {
+  .greenIcon {
+    left: 5.5%;
+    top: 0.4rem;
+    height: 22px;
+    width: 22px;
+  }
+}
+
+@media(max-width: 400px) {
+  .greenIcon {
+    left: 7.5%;
+    top: 0.4rem;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+ .scrollContainer {
+  margin-top: 10px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  text-align: center;
+  display: flex;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 1em;
+  height: 8px;
+  border-radius: 8px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #49494d;
+  border-radius: 16px;
+}
+
+.scrollSectionContainer {
+  margin: 16px;
+  background-color: rgba(26, 26, 26, 1);
+  border-radius: 16px;
+  padding: 32px;
+  min-width: 300px;
+  text-align: left;
+  border: 2px solid transparent;
+}
+
+.scrollSectionContainer:hover {
+  border: 2px solid #18FB9A;
+}
+
+.launchPadLogos {
+  margin-top: 2px;
+  height: max(4vw, 60px);
+  width: max(4vw, 60px);
+  border-radius: 10px;
+}
+
+.sectionedButton {
+  margin-top: 40px;
+  color: rgba(26, 26, 26, 1);
+  background-image: linear-gradient(to right, #9845FF, #18FB9A);
+  border: 2px solid rgba(26, 26, 26, 1);
+}
+
+.sectionedButton:active {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 533;
+  background-color: rgba(26, 26, 26, 1);
+  background-image: none;
+  border: 2px solid #18FB9A;
+}
+
+.pricingContainer {
+  width: 90%;
+  margin: 0px 5% 10vh 5%;
+  padding: 5%;
+  background-color: rgba(26, 26, 26, 1);
+  border-radius: 16px;
+}
+
+.clrdDiv {
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+  padding: 7% 5% 7% 5%;
+}
+
+.nonHolderPricingDiv {
+  background-color: #00253C;
+  background-image: linear-gradient(to bottom right, rgba(25, 77, 80, 0.8), rgba(155, 49, 103, 1));
+}
+
+.holderPricingDiv {
+  background-color: #00253C;
+  background-image: linear-gradient(to bottom right, rgba(39, 1, 56, 0.8), rgba(0, 37, 60, 0.8));
+}
+
+ul {
+  text-align: center;
+  width: 95%;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+
+li {
+width: 85%;
+text-align: left;
+list-style: none;
+color: rgba(200, 200, 200, 1);
+font-size: 16px;
+padding: 2.5% 5% 2.5% 5%;
+margin: 0px 5% 0px 5%;
+border-radius: 5px;
+cursor: pointer;
+}
+
+li:hover {
+  background-color: rgba(56, 56, 56, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+ul h3 {
+  margin: 0px;
+  margin-top: 20px;
+}
+
+.titleUnderline::after {
+  content: "";
+  display: block;
+  width: 100px;
+  padding-top: 8px;
+  border-bottom: 2px solid #f9dd94;
+}
+
+li p {
+  margin: 0px;
+}
+
+.pricingButton {
+  border: 2px solid rgba(26, 26, 26, 1);
+}
+
+.pricingButton:hover {
+  border: 2px solid #18FB9A;
+}
+
+.pricingButton:active {
+  border: 2px solid rgba(26, 26, 26, 1);
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="description" name="description" />
+    <meta name="google" content="notranslate" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico" />
+    <link href="../../../favicon.ico" rel="icon" />
+
+    <title>EraMeta</title>
+  </head>
+
+  <body class="daoBody">
+    <app-new-header></app-new-header>
+    <div class="col section-side-padding section-wrapper">
+      <div class="top-tint z-0"></div>
+
+      <div class="col col-lg-12 col-md-12 col-sm-12 titleSection">
+        <h3 class="jumboTitle">EraMeta DAO</h3>
+        <p class="sectionText grey">
+          EraMeta DAO is a collection of NFT’s, cpmprised by 3D animated
+          artwork. The collection contains 10 diamond keys, 100 gold keys, and
+          3000 silver keys.
+        </p>
+        <div
+          class="w-full flex flex-row justify-center items-center buttonOpenDaoWrapper"
+        >
+          <button class="buttonPrimary" (click)="openWalletSelector()">
+            Open DAO
+          </button>
+        </div>
+      </div>
+
+      <div class="row keySection">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <img
+            class="sectionImage"
+            src="../../../assets/images/key_stack.png"
+          />
+        </div>
+        <div
+          class="col col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 col-sm-8 col-sm-offset-0 col-xs-12 col-xs-offset-0"
+        >
+          <h3 class="sectionTitle">
+            <span class="cyan">// 3,110</span>&nbsp;<span class="white"
+              >DAO Keys</span
+            >
+          </h3>
+          <div class="subSectionWrapper">
+            <div class="subSectionImageWrapper">
+              <img
+                class="subSectionImage"
+                src="../../../assets/images/key_diamond.png"
+              />
+            </div>
+            <div class="subSectionTextWrapper">
+              <p class="subSectionTitle">Diamond key</p>
+              <p class="subSectionDesc">
+                Members of the committee. individuals that work closely with the
+                company in more hands-on advisor roles. all holders have been
+                interviewed.
+              </p>
+            </div>
+          </div>
+          <div class="subSectionWrapper">
+            <div class="subSectionImageWrapper">
+              <img
+                class="subSectionImage"
+                src="../../../assets/images/key_gold.png"
+              />
+            </div>
+            <div class="subSectionTextWrapper">
+              <p class="subSectionTitle">Gold key</p>
+              <p class="subSectionDesc">
+                Members of the board of directors. bod comes with added benefits
+                and weekly board meetings with the company. holders have been
+                through vetting process.
+              </p>
+            </div>
+          </div>
+          <div class="subSectionWrapper">
+            <div class="subSectionImageWrapper">
+              <img
+                class="subSectionImage"
+                src="../../../assets/images/key_silver.png"
+              />
+            </div>
+            <div class="subSectionTextWrapper">
+              <p class="subSectionTitle">Silver key</p>
+              <p class="subSectionDesc">
+                Members of the executives, which comes with revenue sharing
+                benefits, dao membership, and a reduced launchpad cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overviewSection">
+        <div
+          #widgetOverview
+          class="overviewWrapper"
+          (scroll)="onScrollOverviewSection()"
+        >
+          <div class="overview">
+            <div class="overviewItemWrapper">
+              <div class="overviewItem">
+                <div class="overviewImageWrapper">
+                  <div class="overviewImageCircle">
+                    <img
+                      class="overviewImage"
+                      src="../../../assets/icons/icon-group.svg"
+                    />
+                  </div>
+                </div>
+                <h3 class="overviewTitle">Governance</h3>
+                <div class="overviewDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Diamond key votes are worth 100
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Gold key votes are worth 10</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Silver key votes are worth 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="overviewItemWrapper">
+              <div class="overviewItem">
+                <div class="overviewImageWrapper">
+                  <div class="overviewImageCircle">
+                    <img
+                      class="overviewImage"
+                      src="../../../assets/icons/icon-dollar.svg"
+                    />
+                  </div>
+                </div>
+                <h3 class="overviewTitle">Passive income</h3>
+                <div class="overviewDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Diamond key votes are worth 100
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Gold key votes are worth 10</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Silver key votes are worth 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="overviewItemWrapper">
+              <div class="overviewItem">
+                <div class="overviewImageWrapper">
+                  <div class="overviewImageCircle">
+                    <img
+                      class="overviewImage"
+                      src="../../../assets/icons/icon-approved.svg"
+                    />
+                  </div>
+                </div>
+                <h3 class="overviewTitle">Voting power</h3>
+                <div class="overviewDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Diamond key votes are worth 100
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Gold key votes are worth 10</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Silver key votes are worth 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="moveButton moveNext"
+          (click)="scrollRightOverview()"
+          *ngIf="!rightScrollOverviewDisabled"
+        >
+          <img
+            class="moveNextImage"
+            src="../../../assets/icons/icon-rightarrow.svg"
+          />
+        </button>
+        <button
+          class="moveButton movePrev"
+          (click)="scrollLeftOverview()"
+          *ngIf="!leftScrollOverviewDisabled"
+        >
+          <img
+            class="moveNextImage flip-horizontally"
+            src="../../../assets/icons/icon-rightarrow.svg"
+          />
+        </button>
+      </div>
+
+      <div class="goalSectionHead">
+        <h3 class="goalSectionHeadTitle">The goal of the DAO</h3>
+        <p class="goalSectionHeadText grey">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
+      </div>
+
+      <div class="goalSection z-20">
+        <div
+          #widgetGoal
+          class="goalWrapper"
+          (scroll)="onScrollGoalSection()"
+        >
+          <div class="goal">
+            <div class="goalItemWrapper">
+              <div class="goalItem">
+                <div class="goalRibbon diamondRibbon">
+                  <p class="goalRibbonTitle">DIAMOND KEYS</p>
+                  <p class="goalRibbonSubTitle">10</p>
+                </div>
+                <div class="goalItemTitleWrapper">
+                  <h3 class="goalItemTitleText">The Committee</h3>
+                  <p class="goalItemSubTitleText">// BENEFITS</p>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="goalDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      25% higher profit distribution from lunchpad
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">DAO votes are worth 100</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Separate 5% share in metaventure profits
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Whitelist to any EraMeta Original
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Frequent private meetings with each member
+                    </p>
+                  </div>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="buttonContributeWrapper">
+                  <button class="buttonContribute">Contribute</button>
+                </div>
+              </div>
+            </div>
+            <div class="goalItemWrapper">
+              <div class="goalItem">
+                <div class="goalRibbon goldRibbon">
+                  <p class="goalRibbonTitle">GOLD KEYS</p>
+                  <p class="goalRibbonSubTitle">100</p>
+                </div>
+                <div class="goalItemTitleWrapper">
+                  <h3 class="goalItemTitleText">Board Directors</h3>
+                  <p class="goalItemSubTitleText">// BENEFITS</p>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="goalDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      15% higher profit distribution from lunchpad
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">DAO votes are worth 10</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Whitelist to any EraMeta Original
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Ability to speak in weekly board meetings
+                    </p>
+                  </div>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="buttonContributeWrapper">
+                  <button class="buttonContribute">Contribute</button>
+                </div>
+              </div>
+            </div>
+            <div class="goalItemWrapper">
+              <div class="goalItem">
+                <div class="goalRibbon silverRibbon">
+                  <p class="goalRibbonTitle">SILVER KEYS</p>
+                  <p class="goalRibbonSubTitle">3000</p>
+                </div>
+                <div class="goalItemTitleWrapper">
+                  <h3 class="goalItemTitleText">The Executives</h3>
+                  <p class="goalItemSubTitleText">// BENEFITS</p>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="goalDescWrapper">
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Share in profits from the launchpad and metaventures
+                    </p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">DAO votes are worth 1</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">Reduced launchpad price</p>
+                  </div>
+                  <div class="overviewDescItem">
+                    <img
+                      class="overviewDescImage"
+                      src="../../../assets/icons/icon-check-blue.svg"
+                    />
+                    <p class="overviewDescText">
+                      Ability to listen-in on weekly board meetings
+                    </p>
+                  </div>
+                </div>
+                <div class="goalItemDivider"></div>
+                <div class="buttonContributeWrapper">
+                  <button class="buttonContribute">Contribute</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="moveButton moveNext"
+          (click)="scrollRightGoal()"
+          *ngIf="!rightScrollGoalDisabled"
+        >
+          <img
+            class="moveNextImage"
+            src="../../../assets/icons/icon-rightarrow.svg"
+          />
+        </button>
+        <button
+          class="moveButton movePrev"
+          (click)="scrollLeftGoal()"
+          *ngIf="!leftScrollGoalDisabled"
+        >
+          <img
+            class="moveNextImage flip-horizontally"
+            src="../../../assets/icons/icon-rightarrow.svg"
+          />
+        </button>
+      </div>
+
+      <div class="bottomBar z-10">
+        <div class="bottomBarContent row">
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Revenue Sharing</p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Real Partnerships</p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Voting Permissions</p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Fund Management</p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Land Management</p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 bottomBarContentItem">
+            <img
+              class="bottomBarContentImage"
+              src="../../../assets/icons/icon-check-black.svg"
+            />
+            <p class="bottomBarContentText">Metaverse Builds</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-tint z-0"></div>
+    </div>
+    <app-new-footer></app-new-footer>
+    <app-wallet-selector
+      [isModalOpen]="isModalOpen"
+      (closeEvent)="closeWalletSelector($event)"
+      (walletNameEmitter)="onSelectWallet($event)"
+    ></app-wallet-selector>
+  </body>
+</html>

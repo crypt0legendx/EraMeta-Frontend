@@ -1,0 +1,56 @@
+<mat-toolbar>
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon class="menu-icon">menu</mat-icon>
+    </button>
+  </div>
+  <div fxLayoutAlign="end" class="logoContainer">
+    <a routerLink="/home">
+      <img class="logo" src="../../../assets/brand/logo-full-white.png" alt="">
+    </a>
+  </div>
+  <div class="listContainer" fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="40px" class="navigation-items">
+      <li>
+        <a (click)="openBugReportsForm()"><span class="iconify bugIcon" data-icon="ant-design:bug-filled"></span></a>
+      </li>
+      <li>
+        <a routerLink="/collections">Collections</a>
+      </li>
+      <li>
+        <a routerLink="/meta-ventures">Meta-Ventures</a>
+      </li>
+      <li>
+        <a routerLink="/dao">DAO</a>
+      </li>
+      <li>
+        <a routerLink="/launchpad">Launch Pad</a>
+      </li>
+      <li>
+        <a routerLink="/about">About</a>
+      </li>
+      <li>
+        <a routerLink="/faq">FAQ</a>
+      </li>
+      <li *ngIf="!currentUser">
+        <div class="toggleAuthContainer">
+          <div class="centeringContainer">
+            <div>
+              <button (click)="openModal(true)" class="authButton" id="loginBTN" type="button" name="button">Login</button>
+            </div>
+            <div>
+              <button (click)="openModal(false)" class="authButton" id="signupBTN" type="button" name="button">Signup</button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li *ngIf="currentUser">
+        <button routerLink="/dashboard" class="dashboardButton" type="button" name="button">Dashboard <span class="detailsText">(alpha)</span></button>
+      </li>
+      <li *ngIf="currentUser">
+        <img routerLink="/profile" [src]=currentUser.profileImageURL alt="" class="profileImage">
+      </li>
+    </ul>
+  </div>
+  <app-auth-modal [isModalOpen]="isModalOpen" [isLoginForm]="isLoginForm" (closeEvent)="closeModal($event)" (currentUser)="setCurrentUser($event)"></app-auth-modal>
+</mat-toolbar>

@@ -1,0 +1,4 @@
+<div *ngIf="(publicKey$ | async) as publicKey" class="statusModal">
+    <p><span class="white">Address:</span> {{ getDisplayableWalletAddress(publicKey) }}</p>
+    <p><span class="white">Cluster:</span> Solana {{ getDisplayableCluster(clusterUrl) }}<span (click)="onDisconnect()" class="disconnect">disconnect</span></p>
+</div>

@@ -1,0 +1,48 @@
+<div (click)="closeModal($event)" class="loginModal" id="closeModal" *ngIf="isModalOpen">
+
+  <!-- maximum-scale=1.0  to prevent zoom on form input -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+  <div class="modalFormContainer" *ngIf="isLoginForm">
+    <span (click)="closeModal($event)" class="iconify closeModalIcon" id="closeModal" data-icon="eva:close-fill"></span>
+    <h3 class="modalTitle">Welcome back!</h3>
+    <form action="" class="reveal-content" [formGroup]="loginForm">
+      <div class="form-group">
+        <input maxlength="320" type="email" class="form-control emailForm" id="email" placeholder="Email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <input maxlength="75" type="password" class="form-control subjectForm" id="password" placeholder="Password" formControlName="password">
+      </div>
+      <div class="sendContainer" fxLayoutAlign="center">
+        <button (click)="login()" fxLayout="row" fxLayoutAlign="center" type="submit" class="ctaButton"><span *ngIf="!isBuffering" class="ctaText">
+            Login
+          </span>
+          <mat-spinner *ngIf="isBuffering" [diameter]="24" class="spinner"></mat-spinner></button>
+      </div>
+    </form>
+    <p class="sectionText">Don't have an account? <span (click)="changeModal($event)" class="green changeModalBTN">Signup</span></p>
+  </div>
+
+  <div class="modalFormContainer" *ngIf="!isLoginForm">
+    <span (click)="closeModal($event)" class="iconify closeModalIcon" id="closeModal" data-icon="eva:close-fill"></span>
+    <h3 class="modalTitle">Create your account!</h3>
+    <form action="" class="reveal-content" [formGroup]="signupForm">
+      <div class="form-group">
+        <input maxlength="35" type="username" class="form-control usernameForm" id="username" placeholder="Username" formControlName="username">
+      </div>
+      <div class="form-group">
+        <input maxlength="320" type="email" class="form-control emailForm" id="email" placeholder="Email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <input maxlength="75" type="password" class="form-control subjectForm" id="password" placeholder="Password" formControlName="password">
+      </div>
+      <div class="sendContainer" fxLayoutAlign="center">
+        <button (click)="signup()" fxLayout="row" fxLayoutAlign="center" type="submit" class="ctaButton"><span *ngIf="!isBuffering" class="ctaText">
+            Signup
+          </span>
+          <mat-spinner *ngIf="isBuffering" [diameter]="24" class="spinner"></mat-spinner></button>
+      </div>
+    </form>
+    <p class="sectionText">Already have an account? <span (click)="changeModal($event)" class="green changeModalBTN">Login</span></p>
+  </div>
+</div>

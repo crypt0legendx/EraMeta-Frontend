@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+
+<body class="metaVenturesBody">
+    <div class="row jumboRow section-side-padding-bottom">
+        <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+            <div class="jumboContainer">
+                <h3 class="jumboTitle-left white">
+                    Your Business,
+                    <br>
+                    In the Metaverse
+                </h3>
+                <p class="jumboSubTitle-left green">Experience the Power of Decentralization</p>
+                <p class="sectionText-left grey">
+                    We take your real-life business model and transform it for the decentralized world.
+                    This is your chance to tap into a new market with our curated metaverse solutions,
+                    made for brands looking to establish a Web3 presence.
+                </p>
+                <button (click)="openApplicationForm()" class="ctaButton">Apply For Voting</button>
+            </div>
+        </div>
+        <div class="col-lg-8 col-lg-offset-0 col-md-7 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <div class="col-xs-12 jumboArtContainer">
+                <div class="col-xs-4 artContentContainer artLeft">
+                    <img src="https://miro.medium.com/max/1400/1*QRxkVPS7-kAEq7tWfsI1HA.gif" alt="">
+                    <button (click)="visitSandboxEstate()" class="artButton">Visit estate</button>
+                </div>
+                <div class="col-xs-4 artContentContainer artCenter">
+                  <img src="https://m.buro247.my/images/CA-Virtual-Land-metaverse.gif" alt="">
+                  <button class="artButton">Coming soon</button>
+                </div>
+                <div class="col-xs-4 artContentContainer artRight">
+                    <img src="https://media4.giphy.com/media/oFDSjMfe11iiOgQRfY/200w.webp?cid=ecf05e47wmdijllnu949j6f7koqz4ngg42091491jx8zb15l&rid=200w.webp&ct=g" alt="">
+                    <button class="artButton">Join DAO to vote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row section-side-padding">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <div class="row">
+                <h3 class="jumboTitle-left white titleUnderline">
+                    The Possibilities are Endless
+                </h3>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="colorfulContainer" style="background-color: #18FB9A;">
+                    <span class="iconify colorfulIcons black" data-icon="jam:universe"></span>
+                    <h3 class="colorfulTitle">Immerse end users in your custom experience</h3>
+                    <button (click)="watchVideo()" class="colorButton">Watch video</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="colorfulContainer" style="background-color: #9845FF;">
+                    <span class="iconify colorfulIcons" data-icon="fluent:collections-add-24-filled"></span>
+                    <h3 class="colorfulTitle">Offer unique collectibles users can own & trade</h3>
+                    <button (click)="learnAboutNFTs()" class="colorButton">Learn more</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="colorfulContainer" style="background-color: #e6e600;">
+                    <span class="iconify colorfulIcons" data-icon="simple-icons:hive-blockchain"></span>
+                    <h3 class="colorfulTitle">Go bigger & faster with the power of decentralization</h3>
+                    <button (click)="learnAboutDAOs()" class="colorButton">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row section-side-padding-bottom">
+        <div class="stepperContainer">
+            <div class="row">
+                <h3 class="jumboTitle">
+                    Decentralization at Peak Performance
+                </h3>
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <p class="sectionText-center white">
+                        Learn about the process below to see how EraMeta uses the power of decentralization and open-source code,
+                        to make better & faster decisions. Your metaverse business,
+                        incubated by the EraMeta DAO, represented by hand-picked industry experts.
+                    </p>
+                    <p (click)="learnAboutDAOs()" ><span class="textClickable grey">Learn more about DAOs here</span></p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+                    <div class="bottomSectionSeperator"></div>
+                </div>
+            </div>
+
+            <!-- HORIZONTAL STEPPER -->
+            <mat-stepper #stepper [orientation]=this.stepperOrientation [linear]="false" (selectionChange)="onMatStepperToggle(stepper)">
+                <mat-step>
+                    <ng-template matStepLabel>
+                        <div class="stepContainer">
+                            <h3 #stepperTitle1 class="stepSectionTitle green" style="text-decoration: underline;">1. Pitch your meta-business</h3>
+                        </div>
+                    </ng-template>
+                    <div class="row stepperRow">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="titleDiv titleDiv-1">
+                                    <h3 class="titleDivTitle">Pitch your meta-business</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <ul>
+                                    <h3 class="sectionText-left-bold green">1. Application guidelines</h3>
+                                    <li>
+                                      <p class="sectionText-left white">
+                                        To get evaluated, simply click <span (click)="openApplicationForm()" class="clickable grey">here</span>
+                                        or the "Apply now" button below.
+                                        We ask all applicants to carefully fill out the form to the best of their abilities as their applications will be reviewed by the EraMeta core team and DAO committee.
+                                      </p>
+                                    </li>
+
+                                    <h3 class="sectionText-left-bold green">2. Get evaluated for voting</h3>
+                                    <li>
+                                      <p class="sectionText-left white">
+                                        Once you have completed your application,
+                                        your submission will go through a two step evaluation processed by the EraMeta core team and DAO committee.
+                                        Your business will be evaluated based on many varying factors including the problem you are solving,
+                                        the solution / product you are offering, current market validation, quality of the core team and various in-house indicators.
+                                      </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <ul>
+                                    <h3 class="sectionText-left-bold green">3. What is the next step?</h3>
+                                    <li>
+                                      <p class="sectionText-left white">
+                                        If your business is successful during the evaluation process,
+                                        you will be contacted directly by a representative of EraMeta.
+                                        At this point, we have reviewed your business model and it qualifies for voting,
+                                        but a formal introduction to your team is required before being presented to the DAO for resource allocation.
+                                      </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-xs-6">
+                                <button (click)="openApplicationForm()" class="stepperRowButton">Apply now</button>
+                            </div>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="matStepperBTN" matStepperNext>Next: Get voted in</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>
+                        <div class="stepContainer">
+                            <h3 #stepperTitle2 class="stepSectionTitle green">2. Get voted in</h3>
+                        </div>
+                    </ng-template>
+                    <div class="row stepperRow">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="titleDiv titleDiv-2">
+                                    <h3 class="titleDivTitle white">Get voted in</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <ul>
+                                    <p class="sectionText-left-bold green">
+                                        Congratulations! Your venture has passed the intial pitch and screening process.
+                                    </p>
+                                    <li>
+                                      <p class="sectionText-left white">
+                                          The screening process is only the first step,
+                                          in order for EraMeta to allocate resources to your project,
+                                          a vote must take place where the greater majority of DAO members are in favor.
+                                      </p>
+                                    </li>
+
+                                    <p class="sectionText-left-bold green">Voting breakdown</p>
+                                    <li>
+                                      <p class="sectionText-left white">
+                                          The following aspects of your venture will be broken down and voted upon based on a 1 - 10 linear scale,
+                                          individually. Each aspect carries an equal weighting of 25%.
+                                      </p>
+                                      <div class="row percentageRow">
+                                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="sectionText-left percentageText white">
+                                                <span class="iconify twentyFive green" data-icon="ci:pie-chart-25"></span>
+                                                The Problem
+                                            </p>
+                                          </div>
+                                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="sectionText-left white">
+                                                <span class="iconify twentyFive purple" data-icon="ci:pie-chart-25"></span>
+                                                The Solution
+                                            </p>
+                                          </div>
+                                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="sectionText-left white">
+                                                <span class="iconify twentyFive yellow" data-icon="ci:pie-chart-25"></span>
+                                                The Team
+                                            </p>
+                                          </div>
+                                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="sectionText-left white">
+                                                <span class="iconify twentyFive blue" data-icon="ci:pie-chart-25"></span>
+                                                Market Validation
+                                            </p>
+                                          </div>
+                                      </div>
+                                      <p class="sectionText-left white">
+                                        In order to win the vote,
+                                        each aspect of your venture needs an average rating of 6/10 or higher,
+                                        aswell as a majority in favor.
+                                        You can monitor results from the voting in real time.
+                                      </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="stepperDAOImgContainer">
+                                    <img src="https://appinventiv.com/wp-content/uploads/sites/1/2020/11/Role-of-blockchain-in-voting.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-xs-6">
+                                <button (click)="openApplicationForm()" class="stepperRowButton">Apply now</button>
+                            </div>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="matStepperBTN" matStepperNext>Next: Build your meta-business</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>
+                        <div class="stepContainer">
+                            <h3 #stepperTitle3 class="stepSectionTitle green">3. Build your meta-business</h3>
+                        </div>
+                    </ng-template>
+                    <div class="row stepperRow">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="titleDiv titleDiv-3">
+                                    <h3 class="titleDivTitle white">Build your meta-business</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <ul>
+                                    <h3 class="sectionText-left-bold green">Simplified by EraMeta</h3>
+                                    <li>
+                                        <p class="sectionText-left white">
+                                            We know building your business in the metaverse is hard,
+                                            and that’s why EraMeta is here to help you every step of the way.
+                                            Listed below are just a few of the things that we can do for you,
+                                            to help facilitate your transition into Web3:
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="row buildRow">
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="emojione-monotone:money-mouth-face"></span>
+                                                <p class="sectionTitle-center grey">Play-2-Earn experiences</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="clarity:store-solid"></span>
+                                                <p class="sectionTitle-center grey">Customized retail stores</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="emojione-monotone:money-bag"></span>
+                                                <p class="sectionTitle-center grey">Real income sources</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="file-icons:3d-model"></span>
+                                                <p class="sectionTitle-center grey">3D voxel builds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="fa6-solid:champagne-glasses"></span>
+                                                <p class="sectionTitle-center grey">Virtual events</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="buildDiv">
+                                            <div>
+                                                <span class="iconify buildIcon grey" data-icon="bx:landscape"></span>
+                                                <p class="sectionTitle-center grey">Virtual land acquisition</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="videoContainer marginEditContainer">
+                                    <h3 class="sectionTitle-center black">Create your own experience</h3>
+                                    <p class="sectionText-center black">
+                                        Watch this short video of Snoop Dogg’s Sandbox experience for an example of how to monetize your business in the metaverse.
+                                    </p>
+                                    <iframe src="https://www.youtube.com/embed/WD38OueA5zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-xs-6">
+                                <button (click)="openApplicationForm()" class="stepperRowButton">Apply now</button>
+                            </div>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="matStepperBTN" matStepperNext>Next: The power of decentralization</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+
+                <mat-step>
+                    <ng-template matStepLabel>
+                        <div class="stepContainer">
+                            <h3 #stepperTitle4 class="stepSectionTitle green">4. The power of decentralization</h3>
+                        </div>
+                    </ng-template>
+                    <div class="row stepperRow">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="titleDiv titleDiv-4">
+                                    <h3 class="titleDivTitle">The power of decentralization</h3>
+                                </div>
+                            </div>
+                            <div class="comingSoonDiv">
+                                <h3 class="sectionTitle-center grey">Coming Soon</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-xs-6">
+                                <button (click)="openApplicationForm()" class="stepperRowButton">Apply now</button>
+                            </div>
+                            <div class="col-lg-6 col-xs-6">
+                                <button class="matStepperBTN" (click)="stepper.reset()">Completed: Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </div>
+    </div>
+
+    <div class="row colorRow section-side-padding-bottom">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3 class="jumboTitle-left white">
+                Building is What We Do
+            </h3>
+            <p class="sectionText-left white">
+                The mission at EraMeta DAO is to help onboard as many people into the web3
+                & dectralization movement as possible.
+            </p>
+
+            <div class="row buildingRow">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p1 white">Crypto Payments</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p2 white">Custom Smart Contracts</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p3 white">Relevant Data Analytics</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p4 white">In Metaverse Builds</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p5 white">Metaverse Real-Estate</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p class="buildingRow-p p6 white">Expert Level Community</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 marginEditContainer">
+            <h3 class="jumboTitle white">
+                Current DAO Projects
+            </h3>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="ventureContainer venture1">
+                        <span class="iconify ventureIcon" data-icon="map:jewelry-store"></span>
+                        <h3 class="sectionTitle-left white">Custom Jewelry Store</h3>
+                        <button (click)="learnMoreAboutProject()" class="ventureLearnButton">Learn more</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="ventureContainer venture2">
+                        <span class="iconify ventureIcon" data-icon="fluent:flash-16-regular"></span>
+                        <h3 class="sectionTitle-left white">European Fashion Shows</h3>
+                        <button (click)="learnMoreAboutProject()" class="ventureLearnButton">Learn more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                    <div class="ventureContainer venture3">
+                        <span class="iconify ventureIcon" data-icon="fluent:lottery-24-regular"></span>
+                        <h3 class="sectionTitle-left white">Weekly 50/50 Raffle</h3>
+                        <button (click)="learnMoreAboutProject()" class="ventureLearnButton">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<app-footer></app-footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+.dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 3/1;
+    border: 2px dashed rgba(158, 158, 158, 1);
+    border-radius: 12px;
+    background-color: transparent;
+    background: url("https://corenglish.com/wp-content/plugins/super-forms/assets/images/drop-here.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: auto;
+  
+    &.hovering {
+      border: 2px solid #18FB9A;
+    }
+  }
+  
+  progress::-webkit-progress-value {
+    transition: width 0.1s ease;
+  }
+
+  .dropperFilesContainer {
+    margin: 20px 0px 20px 0px;
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .dropperFilesContainer::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+  }
+
+  .dropperFilesContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .dropperFilesContainer::-webkit-scrollbar-thumb {
+    background-color: #49494d;
+    border-radius: 16px;
+  }
+
+  .layersTitle {
+    font-size: 22px;
+    margin: 20px 0px 20px 0px;
+    text-align: left;
+  }
+
+  .fileInfoContainer {
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid rgba(158, 158, 158, 1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .fileInfoContainer:hover {
+    border: 1px solid #18FB9A;
+  }
+
+  .imgDiv {
+      width: 45px;
+      height: 45px;
+      border-radius: 5px;
+      object-fit: cover;
+      background-image: url("https://corenglish.com/wp-content/plugins/super-forms/assets/images/drop-here.png");
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+      position: absolute;
+  }
+
+  .infoDiv h3 {
+    text-align: left;
+    margin: 0px;
+    margin-left: 53px; // 45 + 8
+    margin-bottom: 2px;
+    color: rgba(158, 158, 158, 1);
+    overflow: hidden;
+    text-overflow: '...';
+  }
+
+  .trashIcon {
+    float: right;
+    color: rgba(158, 158, 158, 1);
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  .trashIcon:hover {
+    color: #B20E0E;
+    opacity: 0.66;
+  }
+
+  .saveLayers {
+    font-size: 14px;
+    margin: 20px 8px 20px 0px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  @media(max-width: 768px) {
+    .dropzone {
+      background-size: contain;
+    }
+  }
+  

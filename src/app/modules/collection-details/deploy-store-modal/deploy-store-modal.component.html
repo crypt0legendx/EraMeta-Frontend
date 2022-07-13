@@ -1,0 +1,51 @@
+<!-- <div *ngIf="isModalOpen" (click)="closeModal($event)" id="closeModal" class="selectorModal"> -->
+    <div (click)="closeModal($event)" id="closeModal" class="selectorModal">
+        <div class="selectorContainer">
+          <span (click)="closeModal($event)" class="iconify closeModalIcon" id="closeModal" data-icon="eva:close-fill"></span>
+          <h3 class="modalTitle">Deploy your Store & Start Selling Now!</h3>
+    
+          <div *ngIf="!didSuccessfullyDeploy" class="row">
+              <!-- If collection is null -->
+              <div *ngIf="!currentCollection" class="noCollectionDiv">
+                  <h3 class="errorTitle">No Collection Found..</h3>
+              </div>
+
+              <div *ngIf="currentCollection">
+                  <div class="moveLeft">
+                    <h3 class="sectionTitle">Collection Details</h3>
+                    <div class="bottomSectionSeperator"></div>
+                  </div>
+                <div class="col-lg-3 col-lg-offset-1 col-md-5 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+        
+                    <div class="imgDiv margin-top">
+                        <img  class="profileImage" src={{currentCollection.collectionProfileImageURL}} alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                    <div class="margin-top">
+                        <h3 class="sectionTitle-center green">{{currentCollection.collectionTitle}}</h3>
+                        <p class="sectionText-center white">{{currentCollection.collectionDescription}}</p>
+                        <div class="web3ButtonContainer">
+                            <button *ngIf="!(publicKey$ | async) as publicKey" (click)="openWalletSelector()" class="web3Button">
+                                Connect to Deploy
+                            </button>
+                            <button *ngIf="(publicKey$ | async) as publicKey" (click)="deploy(publicKey)" class="web3Button">
+                                <span *ngIf="!isDeploying">Deploy Now For ◎ 10</span>
+                                <mat-spinner *ngIf="isDeploying" [diameter]="30" class="spinner"></mat-spinner>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div *ngIf="didSuccessfullyDeploy" class="row">
+            <h3 class="sectionTitle-center white">Congratulations!! Everything is now ready for you to start selling your NFTs!</h3>
+
+              <div class="successContainer">
+                <img class="successImg" [src]="gifUrl">
+                <h3 (click)="openStoreFront()" class="textClickable green">Visit my Store Front <span class="iconify openIcon" data-icon="fluent:share-28-filled"></span></h3>
+              </div>
+          </div>
+        </div>
+    </div>
+    <app-wallet-selector [isModalOpen]="isWalletSelectorOpen" (closeEvent)="closeWalletSelector($event)" (walletNameEmitter)="onSelectWallet($event)"></app-wallet-selector>

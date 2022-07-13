@@ -1,0 +1,93 @@
+mat-nav-list {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.sideNavContainer {
+  padding-top: 16px;
+  padding-left:16px;
+  height: 98vh;
+  background-color: black;
+  width: 250px;
+}
+
+.nav-caption {
+  color: rgba(255, 255, 255, 1);
+  margin-left: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-caption:hover, .nav-caption:active {
+  color: #18FB9A;
+}
+
+.stepSectionIcon {
+  color: rgba(255, 255, 255, 1);
+  height: 22px;
+  width: 22px;
+}
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  margin-left: -2vw;
+  margin-bottom: 12px;
+  padding-left: 2vw;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(3.33vw, 18px);
+  font-weight: 500;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.cta-container {
+  width: 100%;
+  height: 100%;
+  margin-left: -2vw;
+  padding-left: 2vw;
+  color: rgba(26, 26, 26, 1);
+  font-size: min(3.33vw, 18px);
+  font-weight: 500;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  border: 0px solid transparent;
+  border-radius: 5px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.profileImage {
+  object-fit: cover;
+  height: 26px;
+  width: 26px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.ellipsis {
+  width: 100%;
+  margin-left: -2vw;
+  padding-left: 2vw;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cta-text {
+  color: rgba(26, 26, 26, 1);
+}
+
+.cta-text:hover {
+  background-image: none;
+  color: rgba(255, 255, 255, 1);
+  -webkit-text-fill-color: rgba(255, 255, 255, 1);
+}
+
+.detailsText {
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  opacity: 1;
+  margin-bottom: 0px;
+}

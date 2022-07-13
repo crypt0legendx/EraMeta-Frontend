@@ -1,0 +1,49 @@
+<!-- <div *ngIf="isModalOpen" (click)="closeModal($event)" id="closeModal" class="selectorModal"> -->
+<div (click)="closeModal($event)" id="closeModal" class="selectorModal">
+    <div class="selectorContainer">
+      <span (click)="closeModal($event)" class="iconify closeModalIcon" id="closeModal" data-icon="eva:close-fill"></span>
+      <h3 class="modalTitle">Create Your Store and Start Selling Today!</h3>
+
+      <div *ngIf="!didSuccessfullyDeploy" class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3 class="sectionTitle">Before you deploy</h3>
+            <div class="bottomSectionSeperator"></div>
+
+            <ul>
+                <li>
+                    <input #checkbox1 type="checkbox">
+                    Understand that your art (wether imported or generated) should now be production ready and final.
+                    Once your store has been initialized, you will need to create an entire new store for different art.
+                </li>
+                <li>
+                    <input #checkbox2 type="checkbox">
+                    Accept our <span (click)="openTermsAndConditions()" class="green textClickable">terms & conditions</span>
+                </li>
+            </ul>
+            <div class="web3ButtonContainer">
+                <button (click)="deploy()" class="web3Button">
+                    <span *ngIf="!isDeploying">Deploy to Create Store Front</span>
+                    <mat-spinner *ngIf="isDeploying" [diameter]="30" class="spinner"></mat-spinner>
+                </button>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3 class="sectionTitle">We reccomend watching this short tutorial</h3>
+            <div class="bottomSectionSeperator"></div>
+            <div class="tutorialVideoContainer purpleBR">
+                <h3 class="tutorialVideoTitle">Setup your wallet for DeFi on Solana</h3>
+                <iframe src="https://www.youtube.com/embed/KigY5nc1lpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+      </div>
+      <div *ngIf="didSuccessfullyDeploy" class="row">
+          <div class="successContainer">
+            <img class="successImg" [src]="gifUrl">
+            <h3 class="successTitle">Congratulations! Your collection has been created!</h3>
+            <button (click)="closeModal($event)" id="closeModal" class="web3Button">Deploy my Store Front</button>
+          </div>
+      </div>
+    </div>
+</div>

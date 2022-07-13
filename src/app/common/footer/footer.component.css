@@ -1,0 +1,130 @@
+footer {
+  height: 48%;
+  width: 100%;
+  /* background-color: black; */
+  background-color: rgba(17, 17, 17, 1);
+  text-align: center;
+}
+
+.footer-left-section {
+  padding: 48px 4vw 0px 7vw;
+  width: 100%;
+}
+
+.footer-right-section {
+  padding: 48px 7vw 0px 8vw;
+  width: 100%;
+  text-align: left;
+}
+
+.logo {
+  width: 166px;
+  margin-bottom: 12px;
+}
+
+.fa-icon, .iconify {
+  color: rgba(255, 255, 255, 1);
+  width: 42px;
+  height: 42px;
+  padding: 6px;
+  padding-left: 0;
+}
+
+.iconify:hover {
+  text-decoration: none;
+  color: #18FB9A;
+  transition: 0.15s ease;
+}
+
+.iconify:active {
+  transform: translateY(4px);
+}
+
+.section-title {
+  margin-top: 20px;
+  text-align: left;
+  font-size: min(4vw, 24px);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+.section-text-gray {
+  text-align: left;
+  color: rgba(158, 158, 158, 1);
+  font-size: min(3.33vw, 18px);
+  opacity: 1;
+}
+
+.ctaButton-reg {
+  width: 123px;
+  height: 50px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: rgba(26, 26, 26, 1);
+  font-size: min(3.33vw, 18px);
+  font-weight: 500;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  border: 0px solid transparent;
+  border-radius: 5px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+input {
+  width: 80%;
+  background-color: rgba(26, 26, 26, 1);
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-right: 16px;
+  border-radius: 5px;
+  font-size: min(3.33vw, 18px);
+  color: rgba(158, 158, 158, 1);
+}
+
+form {
+  width: 100%;
+  padding: 0;
+  margin: 0
+}
+
+a {
+ color: white
+}
+
+.copyright-section {
+  margin-top: 48px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  footer {
+    height: 62%;
+  }
+  .footer-left-section {
+    text-align: center;
+    padding: 32px 4vw 0px 4vw;
+  }
+  .footer-right-section {
+    padding: 0px 10vw 0px 10vw;
+  }
+  .section-text-gray {
+    text-align: center;
+  }
+}
+
+@media (max-width: 435px) {
+  footer {
+    height: 68%;
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    height: 88%;
+  }
+}
+
+.subscribe-text {
+  color: black
+}

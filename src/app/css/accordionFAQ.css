@@ -1,0 +1,63 @@
+.accordionItem {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background-color: rgba(26, 26, 26, 0.66);
+}
+
+.accordionItem a {
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 26px;
+  padding-bottom: 0.75rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(3.5vw, 21px);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.accordionItem a.active {
+  color: #18FB9A;
+  border-bottom: 1px solid #18FB9A;
+}
+
+.accordionItem a:hover, .accordionItem a:hover::after {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.accordionItem a::after {
+  content: url('https://api.iconify.design/bi/arrow-down-circle.svg?color=white');
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  float: right;
+  right: 0rem;
+  bottom: 0.75rem;
+  font-size: 2.5rem;
+}
+
+.accordionItem a.active::after {
+  content: url('https://api.iconify.design/bi/arrow-up-circle.svg?color=white');
+}
+
+.accordionContentContainer {
+  opacity: 0;
+  max-height: 0;
+  padding: 1rem 0;
+  overflow: hidden;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.accordionContent {
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(3.33vw, 18px);
+}
+
+.accordionContentContainer.active {
+  max-height: 100%;
+  opacity: 1;
+}

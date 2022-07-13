@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+<body class="newCollectionBody">
+    <div class="row section-padding">
+        <div class="centeringContainer">
+            <div class="centeredContainer col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <h3 class="jumboTitle">{{collection?.collectionTitle}}</h3>
+                <h3 class="jumboSubTitle grey">The title, description and profile image you specify here will be visible on your store front.</h3>
+
+                <div class="row mainInfoRow">
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="editProfileImageContainer">
+                            <div *ngIf="collection && !isEditingProfileImage">
+                                <img  class="profileImage" src="{{collection.collectionProfileImageURL}}" alt="">
+                                <h3 (click)="toggleProfileImage()" class="textClickable green">Edit image</h3>
+                            </div>
+                            <div *ngIf="isEditingProfileImage">
+                                <uploader (filesEmitter)="setprofileImageFile($event)"></uploader>
+                                <h3 (click)="saveNewProfileImage()" class="textClickable green">
+                                    <span *ngIf="!isProfileImageUploading">Save image</span>
+                                    <mat-spinner *ngIf="isProfileImageUploading" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                                <h3 class="sectionText-details grey">
+                                    jpg, png & gif only. Max size: 25MB
+                                </h3>
+                                <h3 (click)="toggleProfileImage()" class="sectionText-close grey">Close</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                        <div class="mainSectionCotainer">
+                            <!-- TITLE -->
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">Edit Collection Title <span class="sectionText-details grey"> - Max 35 chars</span></h3>
+                                <input #titleInput maxlength="35" type="text" class="form-control" placeholder={{collection?.collectionTitle}}>
+                                <h3 class="textClickable green">
+                                    <span *ngIf="!isTitleUploading" (click)="saveTitle()">Save title</span>
+                                    <mat-spinner *ngIf="isTitleUploading" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                            <!-- DESCRIPTION -->
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">Edit Collection Description <span class="sectionText-details grey"> - Max 280 chars</span></h3>
+                                <textarea #descriptionInput maxlength="280" class="form-control" rows="5" placeholder={{collection?.collectionDescription}}></textarea>
+                                <h3 class="textClickable green">
+                                    <span *ngIf="!isDescriptionUploading" (click)="saveDescription()">Save description</span>
+                                    <mat-spinner *ngIf="isDescriptionUploading" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!isDeployed" class="row section-padding pad-bottom">
+        <div class="centeringContainer">
+            <div class="centeredContainer col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <!-- If collection not found, show that it is missing -->
+                <h3 *ngIf="!this.collection" class="sectionTitle grey">Collection not found</h3>
+
+                <!-- If collection yes found, show stepper -->
+                <mat-stepper #stepper *ngIf="this.collection" orientation="vertical">
+                    <mat-step required>
+                        <ng-template matStepLabel><span class="white">Choose your way!</span></ng-template>
+                          <h3 class="sectionTitle white">I would like to ...</h3>
+                          <p class="grey">
+                              You can either import your completed art (mp4, gif, png, jpeg).
+                              <br>
+                              or
+                              <br>
+                              we can genrate your 2D art (png, jpeg, jpg).
+                          </p>
+                          <div class="row selectArtWayRow">
+                            <button #button1 (click)="selectYourWay(1)" class="web3Button">Generate Art</button>
+                            <button #button2 (click)="selectYourWay(2)" class="web3Button">Import My Art</button>
+                          </div>
+
+                          <!-- If canAddLayer (user will generate art) name your first trait group -->
+                          <div *ngIf="canAddLayer">
+
+                            <div class="row selectArtWayRow">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <h3 class="sectionTitle white">What is the dimension of your art?</h3>
+                                    <p class="grey">ie: 1024 x 1024px</p>
+                                    <input #heightInput min="500" max="9999" type="number" class="form-control" placeholder="Height: min: 500, max 9999">
+                                    <input #widthInput min="500" max="9999" type="number" class="form-control" placeholder="Width: min: 500, max 9999">
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <h3 class="sectionTitle white">What file type will you be generating?</h3>
+                                    <p class="grey">png, jpeg or jpg</p>
+                                    <select #fileTypeSelect class="fileTypeSelect" name="fileTypeSelect" id="">
+                                        <option value="">Select your file type</option>
+                                        <option value="image/png">png</option>
+                                        <option value="image/jpg">jpg</option>
+                                        <option value="image/jpeg">jpeg</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <h3 class="sectionTitle white">Name your first trait group</h3>
+                            <p class="grey">ie: Background. Max 14 chars</p>
+                            <div class="row selectArtWayRow">
+                                <input #traitGroupNameInput maxlength="14" type="text" class="form-control" placeholder="Background">
+                            </div>
+                          </div>
+                          <div *ngIf="didSelectArtType && !isImportingArt">
+                            <button *ngIf="groupNames.length < 1" (click)="stepperInitialize(stepper)" mat-button>Create trait group</button>
+                            <button *ngIf="groupNames.length >= 1" mat-button (click)="resetStepper(stepper)">Reset</button>
+                            <button *ngIf="groupNames.length >= 1" mat-button matStepperNext>Next</button>
+                          </div>
+                          <button *ngIf="isImportingArt" (click)="stepperInitialize(stepper)" mat-button>Next</button>
+                    </mat-step>
+
+                    <!-- As many steps as trait groups. Max 20 ??? -->
+                    <mat-step *ngFor="let groupName of groupNames">
+                            <ng-template matStepLabel><span class="white">{{groupName}}</span></ng-template>
+                            <div *ngIf="!didSelectArtType">
+                                <h3 matStepperPrevious class="sectionTitle grey">Please go back and specify how you would like to generate your art.</h3>
+                                <button mat-button matStepperPrevious>Back</button>
+                            </div>
+                            <div *ngIf="didSelectArtType">
+                                <div class="uploaderZone">
+                                    <app-mass-uploader (filesEmitter)="saveLayersInMemory($event, groupName, stepper.selectedIndex)"
+                                        [currentFileType]="selectedFileType"
+                                        [selectedHeight]="this.height"
+                                        [selectedWidth]="this.width">
+                                    </app-mass-uploader>
+                                </div>
+                                <!-- Name the next trait group. Max 20 ??? -->
+                                <div *ngIf="isAddingNewTraitGroup">
+                                    <h3 class="sectionTitle white">Name your next trait group</h3>
+                                    <p class="grey">ie: Skin. Max 14 chars</p>
+                                    <div class="row selectArtWayRow">
+                                        <input #traitGroupNameInput maxlength="14" type="text" class="form-control" placeholder="Skin">
+                                        <p>
+                                            <span (click)="toggleNewTraitGroup(false)" class="cancelText grey">
+                                                Cancel
+                                            </span>
+
+                                            <span (click)="createNewTraitGroup(traitGroupNameInput.value)" class="cancelText green">
+                                                Create
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <button mat-button matStepperPrevious>Back</button>
+                                <button *ngIf="(stepper.steps.last === stepper.steps.get(stepper.selectedIndex + 1))" (click)="toggleNewTraitGroup(true)" mat-button>Create new trait group</button>
+                                <button *ngIf="!(stepper.steps.last === stepper.steps.get(stepper.selectedIndex + 1))" mat-button matStepperNext>Next</button>
+                                <button (click)="goToLastMatStep(stepper)" mat-button matStepperLast>Review layers</button>
+                            </div>
+                    </mat-step>
+
+                    <!-- last step to review all trait groups + layers -->
+                    <mat-step *ngIf="canReviewTraits">
+                        <ng-template matStepLabel><span class="white">Review All</span></ng-template>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <h3 class="reviewTitle-left white">Preview your art</h3>
+                              <div class="previewImageContainer">
+                                  <img [src]="this.previewBackgroundImage" alt=""/>
+                                  <h3 (click)="previewImage()" class="textClickable green">Preview image</h3>
+                              </div>
+                              <!-- // MARK: Removed createStoreFront button for alpha testing -->
+                              <!-- <button (click)="createStoreFront()" class="createSFButton">Create My Store Front</button> -->
+                              <button (click)="leaveMyFeedback()" class="createSFButton">Leave my Feedback</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <h3 class="reviewTitle-left white">Organize your trait groups</h3>
+                              <mat-stepper #reviewStepper *ngIf="groupNames.length > 0" orientation="vertical">
+                                  <mat-step *ngFor="let groupName of groupNames">
+                                    <ng-template matStepLabel><span class="white">{{groupName}}</span></ng-template>
+                                    <div class="fileInfoContainerScroll">
+                                        <div *ngFor="let file of collectionLayers.get(groupName) | keyvalue" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="fileInfoContainer">
+                                                <div class="imgDiv" [style.background-image]="'url(' + file.key + ')'"></div>
+                                                <h3 class="fileInfoContainerh3">{{file.value.name}}</h3>
+                                                <span class="iconify checkIcon" data-icon="bi:patch-check-fill"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </mat-step>
+                              </mat-stepper>
+                            </div>
+                        </div>
+                  </mat-step>
+                </mat-stepper>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isDeployed" class="row section-padding pad-bottom">
+        <div class="centeringContainer">
+            <div class="centeredContainer col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <h3 class="jumboTitle-left">Store Front Configuration</h3>
+                <div class="row mainInfoRow">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h3 class="inputSectionTitle white">Store Front Details</h3>
+                        <div class="bottomSectionSeperator"></div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Sale Start Date<span class="sectionText-details grey"> (put a past date to begin sale now)</span></h3>
+                            <input #saleDateInput maxlength="35" type="date" class="form-control" placeholder={{collection?.collectionTitle}}>
+                            <h3 (click)="saveSaleDate()" class="textClickable green">
+                                <span *ngIf="!isSaleDateUploading">Save date</span>
+                                <mat-spinner *ngIf="isSaleDateUploading" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Price in SOL ◎ per NFT<span class="sectionText-details grey"> (can be different for white list)</span></h3>
+                            <input #publicPriceInput min="0" max="9999" type="number" class="form-control" placeholder="Pice: min: ◎ 0, max ◎ 9999">
+                            <h3 (click)="savePublicSalePrice()" class="textClickable green">
+                                <span *ngIf="!isPublicSalePriceUploading">Save price</span>
+                                <mat-spinner *ngIf="isPublicSalePriceUploading" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">NFT Supply<span class="sectionText-details grey"> (how many NFTs will be in your collection?)</span></h3>
+                            <input #supplyAmountInput min="1" max="10000" type="number" class="form-control" placeholder="Supply: min: 1, max 10000">
+                            <h3 (click)="saveSupplyAmountInput()" class="textClickable green">
+                                <span *ngIf="!isSavingSupplyAmount">Save supply</span>
+                                <mat-spinner *ngIf="isSavingSupplyAmount" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 colxs-6">
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">
+                                    <span class="iconify linkIcon" data-icon="fa-brands:discord"></span>
+                                    Discord
+                                    <span class="sectionText-details grey"> (optional)</span>
+                                </h3>
+                                <input #discordLinkInput type="url" class="form-control" placeholder="https://discord.com/invite/Nqxpm24CFA">
+                                <h3 (click)="saveDiscordLinkInput()" class="textClickable green">
+                                    <span *ngIf="!isSavingDiscordLink">Save link</span>
+                                    <mat-spinner *ngIf="isSavingDiscordLink" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 colxs-6">
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">
+                                    <span class="iconify linkIcon" data-icon="akar-icons:twitter-fill"></span>
+                                    Twitter
+                                    <span class="sectionText-details grey"> (optional)</span>
+                                </h3>
+                                <input #twitterLinkInput type="url" class="form-control" placeholder="https://twitter.com/EraMetaDao">
+                                <h3 (click)="saveTwitterLinkInput()" class="textClickable green">
+                                    <span *ngIf="!isSavingTwitterLink">Save link</span>
+                                    <mat-spinner *ngIf="isSavingTwitterLink" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 colxs-6">
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">
+                                    <span class="iconify linkIcon" data-icon="akar-icons:instagram-fill"></span>
+                                    Insta
+                                    <span class="sectionText-details grey"> (optional)</span>
+                                </h3>
+                                <input #instagramLinkInput type="url" class="form-control" placeholder="https://www.instagram.com/erametadao/">
+                                <h3 (click)="saveInstagramLinkInput()" class="textClickable green">
+                                    <span *ngIf="!isSavingInstagramLink">Save link</span>
+                                    <mat-spinner *ngIf="isSavingInstagramLink" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 colxs-6">
+                            <div class="inputGroup">
+                                <h3 class="inputTitle white">
+                                    <span class="iconify linkIcon" data-icon="dashicons:admin-site-alt3"></span>
+                                    Website
+                                    <span class="sectionText-details grey"> (optional)</span>
+                                </h3>
+                                <input #websiteLinkInput type="url" class="form-control" placeholder="https://www.erameta.io/">
+                                <h3 (click)="saveWebsiteLinkInput()" class="textClickable green">
+                                    <span *ngIf="!isSavingWebsiteLink">Save link</span>
+                                    <mat-spinner *ngIf="isSavingWebsiteLink" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h3 class="inputSectionTitle white">Meta Data & Mint Details</h3>
+                        <div class="bottomSectionSeperator"></div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Primary Sales Address</h3>
+                            <input #primarySalesAddressInput maxlength="50" type="text" class="form-control" placeholder={{getDisplayableWalletAddress(eraMetaPublicKey)}}>
+                            <h3 class="textClickable green">
+                                <span *ngIf="!isSavingPrimarySalesAddress" (click)="savePrimarySalesAddress()">Save address</span>
+                                <mat-spinner *ngIf="isSavingPrimarySalesAddress" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Add a Secondary Sales Address<span class="sectionText-details grey"> (optional)</span></h3>
+                            <input #secondary1SalesAddressInput maxlength="50" type="text" class="form-control" placeholder={{getDisplayableWalletAddress(someTestWalletPublicKey)}}>
+                            <h3 class="textClickable green">
+                                <span *ngIf="!isSavingSecondarySalesAddress" (click)="saveSecondarySalesAddress(1)">Save address</span>
+                                <mat-spinner *ngIf="isSavingSecondarySalesAddress" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Add a Secondary Sales Address<span class="sectionText-details grey"> (optional)</span></h3>
+                            <input #secondary2SalesAddressInput maxlength="50" type="text" class="form-control" placeholder={{getDisplayableWalletAddress(someTestWalletPublicKey)}}>
+                            <h3 class="textClickable green">
+                                <span *ngIf="!isSavingSecondarySalesAddress" (click)="saveSecondarySalesAddress(2)">Save address</span>
+                                <mat-spinner *ngIf="isSavingSecondarySalesAddress" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Add a Secondary Sales Address<span class="sectionText-details grey"> (optional)</span></h3>
+                            <input #secondary3SalesAddressInput maxlength="50" type="text" class="form-control" placeholder={{getDisplayableWalletAddress(someTestWalletPublicKey)}}>
+                            <h3 class="textClickable green">
+                                <span *ngIf="!isSavingSecondarySalesAddress" (click)="saveSecondarySalesAddress(3)">Save address</span>
+                                <mat-spinner *ngIf="isSavingSecondarySalesAddress" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                        <div class="inputGroup">
+                            <h3 class="inputTitle white">Add a Symbol to Your Collection<span class="sectionText-details grey"> (optional)</span></h3>
+                            <input #symbolInput maxlength="10" type="text" class="form-control" placeholder="ERAMETA">
+                            <h3 class="textClickable green">
+                                <span *ngIf="!isSavingSymbol" (click)="saveSymbol()">Save symbol</span>
+                                <mat-spinner *ngIf="isSavingSymbol" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="deployStoreFront()" class="deployMyStoreButton">Deploy My Store</button>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <!-- // MARK: Removed modals below for alpha testing -->
+    <!-- <app-init-store-modal *ngIf="isInitializingStoreFront"
+      (closeEvent)="closeStoreInitializerModal($event)"
+      [collectionLayers]="collectionLayers"
+      [currentCollection]="collection"
+      [layerHeight]="height"
+      [layerWidth]="width"
+      (emitIsDeployed)="setIsDeployed($event)">
+    </app-init-store-modal> -->
+    <!-- <app-deploy-store-modal *ngIf="isDeployingStoreFront"
+     [currentCollection]="collection"
+     (closeEvent)="closeStoreDeployerModal($event)">
+    </app-deploy-store-modal> -->
+</body>
+</html>

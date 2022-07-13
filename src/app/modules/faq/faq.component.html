@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+
+<body class="faqBody">
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="jumboContainer">
+      <h3 class="jumboTitle">Frequently Asked Questions</h3>
+      <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="sectionContainer">
+          <h3 class="sectionTitle white">Couldn't find the answer to your question?</h3>
+          <p class="sectionText-center grey">
+            Before sending an email, check to see if your question has already been answered in the FAQ section below. If not, feel free to chat with us.
+          </p>
+          <div class="bottomSectionSeperator"></div>
+          <div class="socialContainer">
+            <a href="https://www.instagram.com/erametadao/" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
+            </a>
+            <a href="https://twitter.com/EraMetaDao" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+            </a>
+            <a href="https://discord.gg/Nqxpm24CFA" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="fa-brands:discord"></span>
+            </a>
+          </div>
+        </div>
+
+        <form action="" class="reveal-content" [formGroup]="emailForm">
+               <div class="form-group">
+                 <input maxlength="320" type="email" class="form-control emailForm" id="email" placeholder="Email" formControlName="email">
+               </div>
+               <div class="form-group">
+                 <input maxlength="75" type="text" class="form-control subjectForm" id="subject" placeholder="Subject" formControlName="subject">
+               </div>
+               <div class="form-group">
+                 <textarea maxlength="13000" class="form-control messageForm" rows="5" placeholder="Enter your message" formControlName="message"></textarea>
+               </div>
+               <div class="sendContainer" fxLayoutAlign="center center">
+                 <!--<re-captcha
+                   #recaptcha
+                   (resolved)="resolved()" (error)="emailNotSent()"></re-captcha>-->
+
+                 <button fxLayout="row" fxLayoutAlign="center center" [disabled]="isLoading" type="submit" class="ctaButton-reg" (click)="sendEmail()">
+                   <a *ngIf="!isLoading" color="black" class="subscribe-text">
+                     Send
+                   </a>
+                   <mat-spinner *ngIf="isLoading" [diameter]="30" class="spinner"></mat-spinner>
+                 </button>
+               </div>
+         </form>
+
+      </div>
+
+      <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-xs-12">
+        <div class="videoContainer">
+            <h3 class="sectionTitle white">Setup your wallet for DeFi on Solana</h3>
+            <p class="sectionText-center green">
+              Watch this short video tutorial we found for you! Learn to buy, trade, sell and stake.
+            </p>
+            <iframe src="https://www.youtube.com/embed/KigY5nc1lpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ////// COMPANY FAQ ////// -->
+<div class="row colorfulRow section-padding">
+  <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <h1 class="sectionTitle-left green">EraMeta - The Company</h1>
+    <div class="accordionFAQ">
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is the goal for EraMeta?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            We are a group of young entrepreneurs with the aim of building a tech company that remains at the forefront of Meta-commerce innovation for decades to come.
+            We will become the Shopify of the metaverse, integrating companies into the metaverse and providing a platform for them to manage their meta-business.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What differentiates EraMeta from its competitors?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            We are a company that specializes in integrating real-life businesses into the metaverse.
+            Our team includes strong in-house developers that are constantly innovating and designing new systems to help bridge decentralized blockchain solutions to real world problems.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What can EraMeta provide for NFT visionaries?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            We can make accessible anything a project requires to go from an idea, to a finished product.
+            This includes: Smart contract development, minting (candy machine + auctions), artwork, branding, and much more.
+            Preferably, we work with companies looking to make the jump from web2 to web3.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Is EraMeta Hiring?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            EraMeta is always looking for web3 developers and other individuals that can bring talent and value to the company.
+            Preferably, we hire from within our community.
+            If you think that your vision aligns with EraMeta, we recommend you contact us.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ////// EraMeta DAO FAQ ////// -->
+<div class="row section-padding">
+  <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <h1 class="sectionTitle-left green">EraMeta DAO</h1>
+    <div class="accordionFAQ">
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is EraMeta DAO?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            An NFT collection composed of 3,110 entrance keys.
+            The vision for EraMeta DAO is to build an immensely tight-knit and private community that works together to achieve success in many web3 ventures.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Will I get paid if I hold an EraMeta DAO NFT?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Yes, 50% of all launchpad profits and 10% of all metaventure profits will be gifted directly to DAO members.
+            EraMeta also offers many valuable perks to DAO members including whitelist spots, launchpad price reduction, DAO HQ, and more!
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Who & what are the Board of Directors?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            The 100 gold key holders comprise the BOD.
+            Board members will have access to weekly board meetings with the EraMeta team.
+            They will also receive a 15% higher profit distribution than silver keys, DAO votes are worth 10, and each member will have an automatic whitelist to all future EraMeta Originals.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">When is minting day?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            The final minting date will be in May, BOD will be beforehand.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is the minting price?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            The minting price will be announced in the weeks leading up to the minting day.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Where will the minting take place?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Minting will take place through EraMeta.
+            A link to the candy-machine app will be released via twitter/instagram/discord at the launch date.
+            NFTs will be minted on the Solana network and will be listed on Solana secondary marketplaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ////// Launch Pad FAQ ////// -->
+<div class="row pinkRow section-padding">
+  <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <h1 class="sectionTitle-left green">EraMeta Launch Pad</h1>
+    <div class="accordionFAQ">
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is the launchpad?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Our NFT launchpad reduces the barriers to entry in the Solana Ecosystem.
+            We believe that the future of the NFT space is in the hands of creatives and we wan't to make it easy for anyone to start,
+            run and grow their NFT project without having to write any code.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What are the pricing plans?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            The launchpad services require a 10 ◎ (SOL) deployment fee as well as 5% of primary sales, and 5% of secondary sales.
+            Any EraMeta DAO member will be able to launch their storefront for a reduced cost,
+            with a 2 ◎ (SOL) deployment, 2.5% of primary sales, and 2.5% of secondary sales.
+            50% of launchpad profits are gifted to EraMeta DAO members.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What are EraMeta Originals?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Verified NFT collections launched with the full backing of EraMeta, from launchpad to consultation.
+            Only quality NFTs from real companies will be released as EraMeta Originals.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">How does EraMeta guarantee quality NFTs?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Our in-house team of NFT experts have developed a curated 7-factor scoring system to evaluate each partnership opportunity.
+            Each EraMeta Original will be placed in-front of the 100 Board of Directors for further evaluation.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What are the EraMeta analyst reports?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Every EraMeta Original will be accompanied by a 1-2 page analyst report,
+            summarizing the quality check and the rationale behind each NFT we chose to partner with.
+            These will be attached to the public announcements for partnerships.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Who can apply for the launchpad?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Anyone can apply for access to the launchpad! However, we place a heavy focus on real established companies, looking to move into the metaverse in the future.
+            The launchpad is free to use to anyone looking to launch a collection, only verified collections get listed on EraMeta.io.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ////// Automobili Art FAQ ////// -->
+<!-- <div class="row section-padding">
+  <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+    <h1 class="sectionTitle-green">Automobili Art - Paul Chenard</h1>
+    <div class="accordionFAQ">
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Who is Paul Chenard?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            He is a self taught artist with a love for motorsports, and is the most published automotive artist in the world.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is a live sketch?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            A live sketch consists of Paul sketching the art while standing in front of the physical vehicle as well as the crowd literally sketching "live".
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What do you get when you purchase a Paul Chenard NFT?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Each NFT comes with a digital and physical version of the artwork, as well as any added benefits listed in the roadmap.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">How will I receive the physical copy?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            After proving that you are not a robot and minting your NFT,
+            you will be directed to enter your shipping details in order for EraMeta to send you your art piece.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">What is the Automobili Art Car Meet?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Our top priority is our community. In order to give our community a superior experience,
+            EraMeta has invested heavily into the metaverse to give our community a place to connect, learn, play and earn.
+            The Automobili Art car meet is a car meet hosted on our virtual metaverse land.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">When is minting day?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Minting will take place in Q1, 2022. Exact date TBA.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">When is minting price?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            The minting price will be announced shortly before the minting day.
+          </p>
+        </div>
+      </div>
+      <div class="accordionItem">
+        <a (click)="toggleAccordion($event)">Where will the minting take place?</a>
+        <div class="accordionContentContainer">
+          <p class="accordionContent">
+            Minting will take place through EraMeta. A link to the minting app will be released via twitter/instagram/discord at the launch date.
+            NFTs will be minted on the Solana network and will be listed on Solana secondary marketplaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<app-footer></app-footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+</body>
+
+</html>

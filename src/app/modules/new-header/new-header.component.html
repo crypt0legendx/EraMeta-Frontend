@@ -1,0 +1,134 @@
+<div class="headerContainer flex flex-row justify-between items-center z-40">
+  <div
+    class="headerLeftContainer flex flex-row justify-start items-center space-x-5"
+  >
+    <a routerLink="/meta-ventures" class="headerLink"> Meta-Ventures </a>
+    <a routerLink="/dao" class="headerLink"> DAO </a>
+    <a routerLink="/launchpad" class="headerLink"> Launch Pad </a>
+    <div class="leftMenuContainer relative">
+      <button
+        (click)="toggleLeftMenu()"
+        class="menuButton inline-flex flex-row justify-center items-center space-x-1 cursor-pointer"
+        #leftToggle
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+        <span>Menu</span>
+      </button>
+      <div
+        class="leftMenu flex flex-col space-y-5"
+        *ngIf="leftMenuVisible"
+        [@enterAnimationLeft]
+        #leftMenu
+      >
+        <button
+          (click)="toggleLeftMenu()"
+          class="menuButton inline-flex flex-row justify-center items-center space-x-1 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+          <span>Close</span>
+        </button>
+        <a routerLink="/meta-ventures" class="menuLink"> Meta-Ventures </a>
+        <a routerLink="/dao" class="menuLink"> DAO </a>
+        <a routerLink="/launchpad" class="menuLink"> Launch Pad </a>
+        <div class="menuDivider"></div>
+        <a routerLink="/about" class="menuLink"> About </a>
+        <a routerLink="/faq" class="menuLink"> FAQ </a>
+      </div>
+    </div>
+  </div>
+  <div class="headerLogoContainer">
+    <a routerLink="/">
+      <img
+        class="headerLogo cursor-pointer"
+        src="../../../assets/brand/logo-full-white.svg"
+      />
+    </a>
+  </div>
+  <div
+    class="headerRightContainer flex flex-row justify-end items-center space-x-5"
+  >
+    <a routerLink="/about" class="headerLink"> About </a>
+    <a routerLink="/faq" class="headerLink"> FAQ </a>
+    <button class="buttonPrimary only-md">Whitepaper</button>
+    <div class="rightMenuContainer relative">
+      <button
+        (click)="toggleRightMenu()"
+        class="menuButton p-2 inline-flex flex-row justify-center items-center space-x-1 cursor-pointer"
+        #rightToggle
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
+      <div
+        class="rightMenu flex flex-col justify-center items-end space-y-5"
+        *ngIf="rightMenuVisible"
+        [@enterAnimationRight]
+        #rightMenu
+      >
+        <button
+          (click)="toggleRightMenu()"
+          class="menuButton p-2 inline-flex flex-row justify-center items-center cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </button>
+        <a routerLink="/meta-ventures" class="menuLink w-full">
+          Meta-Ventures
+        </a>
+        <a routerLink="/dao" class="menuLink w-full"> DAO </a>
+        <a routerLink="/launchpad" class="menuLink w-full"> Launch Pad </a>
+        <div class="menuDivider"></div>
+        <a routerLink="/about" class="menuLink w-full"> About </a>
+        <a routerLink="/faq" class="menuLink w-full"> FAQ </a>
+        <div class="menuDivider"></div>
+        <div class="w-full flex justify-start items-center">
+          <button class="buttonPrimary">Whitepaper</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

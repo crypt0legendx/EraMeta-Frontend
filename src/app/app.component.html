@@ -1,0 +1,22 @@
+<app-layout *ngIf="!isLoading">
+  <main fxLayout="column">
+    <app-wallet-status-modal></app-wallet-status-modal>
+    <router-outlet></router-outlet>
+  </main>
+</app-layout>
+<div
+  class="loading-container"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  *ngIf="isLoading"
+>
+  <img class="loading-indicator" src="../assets/tools/giphy.gif" alt="" />
+</div>
+<div
+  class="loading-container logo-container"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  *ngIf="isLoading"
+>
+  <img class="logo" src="../../../assets/brand/logo-full-white.png" alt="" />
+</div>

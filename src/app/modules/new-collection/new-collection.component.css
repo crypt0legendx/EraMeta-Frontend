@@ -1,0 +1,59 @@
+body {
+  background-color: rgba(18, 18, 18, 1);
+  text-align: center;
+}
+
+.section-padding {
+  padding: 10vh 0vw 10vh 0vw;
+}
+
+.centeringContainer {
+  text-align: center;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.centeredContainer {
+  background-color: rgba(26, 26, 26, 1);
+  padding: 60px 5% 60px 5%;
+  border-radius: 16px;
+}
+
+.jumboTitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(10vw, 42px);
+  font-weight: 550;
+  line-height: 1.25;
+  margin: 0px 5% 12px 5%;
+}
+
+.subTitle {
+  text-align: center;
+  font-size: min(3,5vw, 22px);
+  margin-top: -12px;
+}
+
+.newCollectionContainer {
+  width: 100%;
+  background-color: rgba(26, 26, 26, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+mat-stepper {
+  background-color: rgba(26, 26, 26, 1);
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  display: none;
+}
+
+input::placeholder {
+  color: rgba(158, 158, 158, 1);
+}
+
+mat-form-field, input {
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+}

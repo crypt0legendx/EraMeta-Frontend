@@ -1,0 +1,230 @@
+.aboutBody {
+  background-color: rgba(18, 18, 18, 1);
+}
+
+.solanaClrs {
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bottomSectionSeperator {
+  margin-top: 4vh;
+  width: 66%;
+  margin-left: 17%;
+  bottom: 0;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  height: 2px;
+}
+
+.jumboContainer {
+  margin-top: 8vh;
+  border-radius: 16px;
+  padding-top: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 8vh;
+  padding-left: 4vw;
+}
+
+.jumboTitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+
+.sectionTitle-left {
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  font-size: min(5.25vw, 45px);
+  font-weight: 500;
+}
+
+.sectionText-center {
+  color: rgba(158, 158, 158, 1);
+  text-align: center;
+  font-size: 16px;
+}
+
+.sectionText-left {
+  color: rgba(255, 255, 255, 1);
+  text-align: left;
+  font-size: min(3.33vw, 18px);
+}
+
+.socialContainer {
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.fa-icon, .iconify {
+  color: rgba(255, 255, 255, 1);
+  width: 42px;
+  height: 42px;
+  line-height: 32px;
+  padding: 6px;
+}
+
+.iconify:hover {
+  text-decoration: none;
+  color: #18FB9A;
+  transition: 0.15s ease;
+}
+
+.iconify:active {
+  transform: translateY(4px);
+}
+
+.whitePaperContainer {
+  text-align: center;
+  padding-top: 4vh;
+  padding-bottom: 8vh;
+}
+
+.buttonContainer {
+  display: inline-block;
+  text-align: center;
+  margin: 8px;
+}
+
+.activeButton {
+  padding-top: 12px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 1);
+  color: #18FB9A;
+  font-size: min(3vw, 16px);
+  background: rgba(26, 26, 26, 1);
+  border: 1px solid #18FB9A;
+  border-radius: 5px;
+  text-decoration: underline solid #18FB9A !important;
+  cursor: pointer;
+}
+
+.nonActiveButton {
+  padding-top: 12px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  color: rgba(158, 158, 158, 1);
+  font-size: min(3vw, 16px);
+  background: transparent;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  text-decoration: none !important;
+  cursor: default;
+}
+
+.greenRow {
+  background-color: #009478;
+  background-image: linear-gradient(to right, #000428, #004e92);
+  /* background-image: linear-gradient(to right, #7b4397, #dc2430); */
+  /* background-image: linear-gradient(to right, #eacda3, #d6ae7b); */
+  /* background-image: linear-gradient(to right, #614385, #516395); */
+}
+
+.section-padding-double {
+  padding-top: 10vh;
+  padding-right: 4vw;
+  padding-bottom: 10vh;
+  padding-left: 4vw;
+}
+
+.sectionTitleContainer-clear {
+  border-radius: 16px;
+  padding-bottom: 4vh;
+}
+
+.teamMemberContainer {
+  text-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 16px;
+  border: 1px solid #18FB9A;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: rgba(26, 26, 26, 0.66);
+  padding: 3vw 1vw 3vw 1vw;
+  min-height: 238px;
+  cursor: pointer;
+}
+
+.teamMemberContainer:hover {
+  background-color: rgba(26, 26, 26, 1);
+}
+
+.teamMemberContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.teamMemberImage {
+  /* height: 40%; */
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.teamMemberDetails {
+  margin-top: 16px;
+}
+
+.teamMemberName {
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.teamMemberRole {
+  margin-top: -12px;
+  text-align: left;
+  color: rgba(158, 158, 158, 1);
+  font-size: 14px;
+}
+
+.infoButton {
+  position: absolute;
+  text-align: right;
+  right: 16px;
+  bottom: 0;
+}
+
+.infoButton:hover {
+  cursor: pointer;
+}
+
+.infoButtonTitle {
+  text-align: left;
+  color: #18FB9A;
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .jumboTitle {
+    font-size: 28px;
+  }
+  .activeButton, .nonActiveButton {
+    padding-top: 12px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 578px) {
+  .teamMemberContainer {
+    min-height: 222px;
+  }
+}
+
+@media (max-width: 450px) {
+  .teamMemberContainer {
+    min-height: 188px;
+  }
+}

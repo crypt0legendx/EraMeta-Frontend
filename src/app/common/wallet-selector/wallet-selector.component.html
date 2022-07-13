@@ -1,0 +1,17 @@
+<div *ngIf="isModalOpen" (click)="closeModal($event)" id="closeModal" class="selectorModal">
+    <div class="selectorContainer">
+      <span (click)="closeModal($event)" class="iconify closeModalIcon" id="closeModal" data-icon="eva:close-fill"></span>
+      <h3 class="modalTitle">Connect your wallet</h3>
+
+      <!-- Make this list below a mat-list when moving for deployment -->
+      <ul>
+          <li *ngFor="let wallet of wallets$ | async" (click)="emitWalletName(wallet.adapter.name)">
+            <a>
+                <span> {{ wallet.adapter.name }}</span>
+                <span class="green walletStatus"> {{ wallet.readyState === 'Installed' ? 'Installed' : ''}}</span>
+            </a>
+          </li>
+      </ul>
+      <p class="downloadText" (click)="downloadPhantom()">Don't have a wallet? <span class="green">Download Phantom</span></p>
+    </div>
+</div>

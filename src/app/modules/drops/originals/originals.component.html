@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+
+<body class="originalsBody">
+    <div class="row section-side-padding-top">
+        <div class="col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <h3 class="jumboTitle-left white">{{selectedCollection ? selectedCollection.collectionTitle : "Loading ..."}}</h3>
+            <div class="iconContainer">
+                <a (click)="openWebsite()"><span class="iconify" data-icon="mdi:web"></span></a>
+                <a (click)="openTwitter()"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
+                <a (click)="openDiscord()"><span class="iconify" data-icon="fa-brands:discord"></span></a>
+            </div>
+            <div class="bottomSectionSeperator"></div>
+            <div class="badgeContainer">
+                <p *ngFor="let perk of selectedCollection?.perks" class="sectionText-center badge green">
+                    <span class="iconify badgeIcon" data-icon="codicon:verified-filled"></span>
+                    {{perk}}
+                </p>
+                <p class="sectionText-center badge green">
+                    <span class="iconify badgeIcon" data-icon="codicon:verified-filled"></span>
+                    ERAMETA ORIGINAL
+                </p>
+                <p class="sectionText-center badge green">
+                    <span class="iconify badgeIcon" data-icon="codicon:verified-filled"></span>
+                    DOXXED
+                </p>
+                <p class="sectionText-center detailsBadge white">
+                    <span class="grey">SUPPLY:</span> {{selectedCollection?.totalSupply || 'TBA'}}
+                </p>
+                <p class="sectionText-center detailsBadge white">
+                    <span class="grey">PRICE:</span> {{getDisplayablePriceTag()}}
+                </p>
+            </div>
+
+            <!-- Show this container from 768px screen width or more -->
+            <div class="detailsContainer md-to-lg-display">
+                <ul>
+                    <h3 class="sectionTitle-left-bold white">Description</h3>
+                    <li>
+                      <p class="sectionText-left grey">{{selectedCollection?.collectionDescription}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <div class="profileImageContainer">
+                <img src={{selectedCollection?.collectionProfileImageURL}} alt="">
+                <button (click)="openAnalystReport()" class="reportButton">
+                    EraMeta Analyst Report
+                    <span class="iconify reportIcon" data-icon="fa:share-square-o"></span>
+                </button>
+            </div>
+
+            <!-- Show this container from 768px screen width or less -->
+            <div class="detailsContainer xs-to-sm-display">
+                <ul>
+                    <h3 class="sectionTitle-left-bold white">Description</h3>
+                    <li>
+                      <p class="sectionText-left grey">{{selectedCollection?.collectionDescription}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row section-side-padding-custom">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 sectionContainer">
+            <!-- Indicate loading -->
+            <div *ngIf="!didFetchArt" fxLayoutAlign="center">
+                <mat-spinner [diameter]="44" class="spinner"></mat-spinner>
+            </div>
+
+            <!-- Finished loading -->
+            <div *ngIf="didFetchArt">
+                <div *ngIf="artDownloadURLs.size < 1">
+                    <p class="sectionTitle-center green">No art to show at the moment</p>
+                    <p class="sectionText-center grey">Art reveal: TBA</p>
+                </div>
+
+                <div *ngIf="artDownloadURLs.size > 0">
+                    <div *ngFor="let artMap of artDownloadURLs | keyvalue">
+                        <h3 class="carouselTitle white">{{artMap.key}}</h3>
+                        <div class="carouselContainer">
+                            <div class="carouselBox">
+                                <img *ngFor="let artURL of artMap.value as string" (click)="openImageLightbox(artURL)" src={{artURL}} alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+    <app-image-lightbox *ngIf="isLightBoxOpen" (closeEvent)="closeImageLightbox($event)" [selectedImageURL]="selectedImageURL"></app-image-lightbox>
+</body>
+</html>

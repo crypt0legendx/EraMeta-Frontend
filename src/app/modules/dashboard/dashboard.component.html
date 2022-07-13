@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+<body class="dashboardBody">
+    <div class="row section-padding">
+        <div class="centeringContainer">
+            <div class="centeredContainer col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <h3 class="jumboTitle">My Collections</h3>
+                <h3 class="subTitle grey">Edit or create a new collection</h3>
+                <div class="row">
+                    <div *ngFor="let collection of this.collections" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div (click)="viewCollection(collection.collectionId)" class="collectionContainer">
+                            <img class="collectionProfileImage" src={{collection.collectionProfileImageURL}} alt="">
+                            <h3 class="collectionTitle green">{{collection.collectionTitle}}</h3>
+                        </div>
+                    </div>
+                    <div *ngIf="(this.didFetchCollections) && (this.collections.length < 5)" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div (click)="createNewCollection()" class="newCollectionContainer">
+                            <div class="plusContainer">
+                                <span class="iconify" data-icon="bi:plus-circle"></span>
+                                <h3 class="plusContainerText grey">New collection</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>

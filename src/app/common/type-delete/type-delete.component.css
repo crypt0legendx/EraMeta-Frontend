@@ -1,0 +1,28 @@
+div span {
+  text-align: center;
+  margin-left: 0px;
+}
+
+.blink {
+  border-right-style: solid;
+  animation: 1s blink infinity;
+  width: 0px;
+  display: none;
+}
+
+.text {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-size: 38px;
+    font-weight: 550;
+    line-height: 1.25;
+    padding: 18px 24px 18px 24px;
+    border-radius: 5px;
+    background-color: #18FB9A;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}

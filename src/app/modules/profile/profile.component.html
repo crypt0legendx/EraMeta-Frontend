@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <meta content="description" name="description">
+        <meta name="google" content="notranslate"/>
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+        <link href="../../../favicon.ico" rel="icon">
+
+        <title>EraMeta</title>
+      </head>
+
+      <body class="profileBody">
+        <div class="row headerRow">
+        </div>
+        <div class="row userProfileInfoRow">
+            <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                <div class="userInfoContainer" *ngIf="currentUser">
+                    <img class="profileImage" [src]=currentUser.profileImageURL alt="">
+                    <h3 class="sectionTitle">{{nameTag}}</h3>
+                    <h3 class="sectionText green">@{{currentUser.username}}</h3>
+                    <a (click)="toggleProfileModal(true)" class="editButton">Edit Profile</a>
+                    <br>
+                    <br>
+                    <a (click)="logout()" class="logoutButton">Logout</a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                <div class="row">
+                    <div class="profileToggleSection">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 toggleContainer">
+                            <button #toggle1 (click)="toggleFilterSection($event)" class="toggleTitleButton" id="toggle1">My Collections</button>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 toggleContainer">
+                            <button #toggle2 (click)="toggleFilterSection($event)" class="toggleTitleButton" id="toggle2">EraMeta Originals</button>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 toggleContainer">
+                            <button #toggle3 (click)="toggleFilterSection($event)" class="toggleTitleButton" id="toggle3">DAO Voting History</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="filteredContentContainer">
+                            <h3 #noResultsText class="noResultsText">No Results</h3>
+                            <div class="loadingIndicator" *ngIf="isLoading">
+                                <img src="../../../assets/tools/giphy.gif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="editProfileModal" *ngIf="isOnEditProfilePage && currentUser">
+            <!-- maximum-scale=1.0  to prevent zoom on form input -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+            <div class="row closeModalIconRow" (click)="toggleProfileModal(false)">
+                <p class="sectionText-close">Close</p>
+                <span class="iconify closeModalIcon" data-icon="eva:close-fill"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                    <div class="editProfileImageContainer">
+                        <div *ngIf="isEditingProfileImage" class="editProfileImage">
+                          <uploader (filesEmitter)="setFile($event)"></uploader>
+                        </div>
+                        <img *ngIf="!isEditingProfileImage" class="editProfileImage" [src]=currentUser.profileImageURL alt="">
+                        <div>
+                            <h3 *ngIf="isEditingProfileImage && !isUploadingImage" (click)="uploadProfileImage()" class="sectionText-img green">Save</h3>
+                            <mat-spinner *ngIf="isUploadingImage" [diameter]="24" class="spinner saveButtonSpinner"></mat-spinner>
+                            <h3 *ngIf="!isEditingProfileImage" (click)="toggleEditProfileImage($event)" class="sectionText-img green">Edit profile image</h3>
+                            <h3 *ngIf="isEditingProfileImage" class="sectionText-img-details grey">
+                                jpg & png only. Max size: 2MB
+                            </h3>
+                            <h3 *ngIf="isEditingProfileImage" (click)="toggleEditProfileImage($event)" class="sectionText-close grey">Close</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                    <div class="toggleFormButtonContainer">
+                        <button (click)="toggleForm(!isChangingPassword)" class="toggleFormButton" type="button" name="button">{{toggleFormButtonValue}}</button>
+                    </div>
+                    <form action="" class="reveal-content" [formGroup]="editProfileForm" *ngIf="!isChangingPassword">
+                        <div class="form-group">
+                          <input maxlength="35" type="username" placeholder="Update username from {{currentUser.username}}" formControlName="username">
+                        </div>
+                        <div class="form-group">
+                            <input maxlength="35" type="username" placeholder="First name" formControlName="firstName">
+                        </div>
+                        <div class="form-group">
+                            <input maxlength="35" type="username" placeholder="Last name" formControlName="lastName">
+                        </div>
+                        <div fxLayoutAlign="center">
+                          <button (click)="updateProfile()" fxLayout="row" fxLayoutAlign="center" type="submit" class="ctaButton"><span *ngIf="!isBuffering" class="ctaText">
+                              Update Profile
+                            </span>
+                            <mat-spinner *ngIf="isBuffering" [diameter]="30" class="spinner"></mat-spinner></button>
+                        </div>
+                    </form>
+                    <form action="" class="reveal-content" [formGroup]="changePasswordForm" *ngIf="isChangingPassword">
+                        <div class="form-group">
+                            <input maxlength="75" type="password" placeholder="Current password" formControlName="currentPassword">
+                          </div>
+                        <div class="form-group">
+                          <input maxlength="75" type="password" placeholder="New password" formControlName="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <input maxlength="75" type="password" placeholder="Confirm new password" formControlName="confirmPassword">
+                          </div>
+                          <div fxLayoutAlign="center">
+                            <button (click)="updatePassword()" fxLayout="row" fxLayoutAlign="center" type="submit" class="ctaButton"><span *ngIf="!isBuffering" class="ctaText">
+                                Update Password
+                              </span>
+                              <mat-spinner *ngIf="isBuffering" [diameter]="30" class="spinner"></mat-spinner></button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+          <app-footer></app-footer>
+      </body>
+</html>

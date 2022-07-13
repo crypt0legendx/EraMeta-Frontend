@@ -1,0 +1,126 @@
+mat-toolbar {
+  background-color: #000000;
+  overflow: visible;
+  text-align: center;
+  align-items: center;
+}
+
+.menu-icon {
+  color: rgba(255, 255, 255, 1);
+}
+
+.logo {
+  margin-top: 12px;
+  width: 133px;
+  margin-left: 32px
+}
+
+.profileImage {
+  object-fit: cover;
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  margin-top: 2px;
+  right: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bugIcon {
+  color: rgba(255, 255, 255, 1);
+  height: 18px;
+  width: 18px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.listContainer {
+  margin-right: 32px;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a:hover, a:active,
+.bugIcon:hover, .bugIcon:active {
+  color: #18FB9A;
+}
+
+.toggleAuthContainer {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  white-space: nowrap;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(26, 26, 26, 1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.centeringContainer {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.authButton {
+  background-color: transparent;
+  width: 100px;
+  padding: 12px 0px 12px 0px;
+  border: none;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+#loginBTN:hover {
+  color: #18FB9A;
+}
+
+#signupBTN {
+  color: rgba(26, 26, 26, 1);
+  background-color: #18FB9A;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+}
+
+#signupBTN:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 14px;
+  }
+}
+
+.dashboardButton {
+  padding: 12px 20px 12px 20px;
+  color: rgba(26, 26, 26, 1);
+  font-size: 14px;
+  font-weight: 550;
+  background: linear-gradient(to right, #9845FF, #18FB9A);
+  border: 0px solid transparent;
+  border-radius: 5px;
+  text-align: right;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.dashboardButton:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.detailsText {
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+  opacity: 1;
+  margin-bottom: 0px;
+}

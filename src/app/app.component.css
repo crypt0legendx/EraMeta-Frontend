@@ -1,0 +1,38 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  background-color: transparent;
+  width: 100%;
+}
+
+app-header {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.loading-indicator {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.logo-container {
+  margin-top: 100px;
+}
+
+.logo {
+  width: 150px;
+  opacity: 0.8;
+}

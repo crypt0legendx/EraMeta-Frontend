@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../favicon.ico">
+  <link href="../../../favicon.ico" rel="icon">
+
+  <title>EraMeta</title>
+</head>
+
+<body>
+  <div class="row section-padding">
+    <div class="centeringContainer">
+        <div class="centeredContainer col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <h3 class="jumboTitle">Introduce your Collection</h3>
+            <h3 class="subTitle grey">All of these entries can be edited later</h3>
+            <div class="newCollectionContainer">
+              <mat-stepper #stepper orientation="vertical">
+
+                <mat-step [stepControl]="firstFormGroup" errorMessage="A title is required.">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel><span class="white">Title your Collection</span></ng-template>
+                    <mat-form-field appearance="fill">
+                      <mat-label class="white">Collection Name</mat-label>
+                      <input maxlength="35" matInput placeholder="EraMeta DAO" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <div>
+                      <p class="grey">max 35 characters</p>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+                <mat-step [stepControl]="secondFormGroup" errorMessage="A description is required.">
+                  <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel><span class="white">Describe your Collection</span></ng-template>
+                    <mat-form-field appearance="fill">
+                      <mat-label class="white">Collection Description</mat-label>
+                      <input maxlength="280" matInput placeholder="Taking over the sandbox one voxel at a time" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <div>
+                      <p class="grey">max 280 characters. No longer than a tweet</p>
+                      <button mat-button matStepperPrevious>Back</button>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+                <mat-step>
+                  <ng-template matStepLabel><span class="white">Next</span></ng-template>
+                  <p class="grey">
+                    Clicking next will initialize your collection.
+                    Once your collection has been initialized,
+                    you will be able to generate art, customize your store-front
+                    and deploy it!
+                  </p>
+                  <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperPrevious (click)="stepper.reset()">Reset</button>
+                    <button (click)="verifyCollectionDetails()" mat-button>Initialize Collection</button>
+                  </div>
+                </mat-step>
+              </mat-stepper>
+            </div>
+        </div>
+    </div>
+</div>
+  <app-footer></app-footer>
+</body>
+<app-full-screen-loader *ngIf="isInitializingCollection"></app-full-screen-loader>
+</html>

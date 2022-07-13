@@ -1,0 +1,23 @@
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 2px dashed #18FB9A;
+  border-radius: 12px;
+  background-color: transparent;
+  background: url("https://corenglish.com/wp-content/plugins/super-forms/assets/images/drop-here.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain;
+
+  &.hovering {
+    border: 2px solid #18FB9A;
+  }
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}

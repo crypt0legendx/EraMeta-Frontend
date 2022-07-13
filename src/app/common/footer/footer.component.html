@@ -1,0 +1,55 @@
+<footer>
+
+  <!-- maximum-scale=1.0  to prevent zoom on form input -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center" fxFlex="90">
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.lt-md="center center" class="footer-left-section">
+          <div fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.lt-md="center center">
+            <img class="logo" src="../../../assets/brand/logo-full-white.png" alt="">
+            <p class="section-text-gray">Bringing SaaS to the Metaverse</p>
+          </div>
+          <div class="socialContainer">
+            <a href="https://www.instagram.com/erametadao/" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
+            </a>
+            <a href="https://twitter.com/EraMetaDao" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+            </a>
+            <a href="https://discord.gg/Nqxpm24CFA" target="_blank" title="" class="fa-icon">
+              <span class="iconify" data-icon="fa-brands:discord"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.lt-md="center center" class="footer-right-section">
+          <div fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.lt-md="center center">
+            <h3 class="section-title">The Latest Updates From EraMeta</h3>
+            <p class="section-text-gray">
+              Exclusive NFT launches and upcoming events,
+              all the updates sent directly to your inbox.
+              Subscribe today!
+            </p>
+          </div>
+          <div fxLayout="row">
+            <form [formGroup]="subscriptionForm" fxLayoutAlign="center start">
+              <input placeholder="Email" class="email-input" formControlName="email"/>
+              <button [disabled]="isLoading" fxLayout="row" fxLayoutAlign="center center" (click)="this.subscribe()" class="ctaButton-reg" type="button" name="button">
+                <a *ngIf="!isLoading" color="black" class="subscribe-text">
+                  Subscribe
+                </a>
+                <mat-spinner *ngIf="isLoading" [diameter]="30" class="spinner"></mat-spinner>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="10" class="copyright-section">
+      <a>Copyright © {{currentYear}} EraMeta</a>
+    </div>
+  </div>
+</footer>

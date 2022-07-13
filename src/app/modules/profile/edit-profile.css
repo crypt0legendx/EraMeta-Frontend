@@ -1,0 +1,168 @@
+.editProfileModal {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 98%;
+    width: 100vw;
+    background-color: black;
+    z-index: 99;
+}
+
+.closeModalIconRow {
+  margin-bottom: 5%;
+  padding-top: 33px;
+  padding-right: 63px;
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.closeModalIcon {
+    width: 42px;
+    height: 42px;
+    color: rgba(158, 158, 158, 1);
+    cursor: pointer;
+    z-index: 100; /* One more than editProfileModal */
+  }
+
+  .editProfileImageContainer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 333px;
+    background-color: rgba(26, 26, 26, 1);
+    border-radius: 16px;
+    padding: 5% 5% 5% 5%;
+}
+
+.editProfileImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 0px;
+}
+
+.sectionText-img {
+  text-align: left;
+  font-size: 16px;
+  opacity: 1;
+  margin-top: 5%;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.sectionText-img-details {
+  text-align: left;
+  font-size: 14px;
+  opacity: 1;
+  margin-bottom: 0px;
+}
+
+.sectionText-close {
+  text-align: right;
+  font-size: 14px;
+  color: rgba(158, 158, 158, 1);
+  opacity: 1;
+  margin-bottom: 0px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.saveButtonSpinner {
+  margin-top: 5%;
+  margin-bottom: 0px;
+}
+
+.toggleFormButtonContainer {
+    width: 90%;
+    margin-bottom: -12px;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.toggleFormButton {
+    padding: 0.5vw 1vw;
+    width: 188px;
+    color: rgba(158, 158, 158, 1);
+    font-size: min(3vw, 14px);
+    font-weight: 500;
+    background: rgba(26, 26, 26, 1);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+
+  .toggleFormButton:hover {
+    border: 1px solid #18FB9A;
+    color: rgba(255, 255, 255, 1);
+  }
+
+form {
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    background-color: black;
+  }
+
+  .form-group input {
+    background-color: rgba(26, 26, 26, 1);
+    height: 50px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    width: 90%;
+    font-size: min(3.33vw, 18px);
+    color: rgba(158, 158, 158, 1);
+  }
+
+  .ctaButton {
+    width: 90%;
+    margin-top: 8px;
+    padding: 1vw 2vw;
+    color: rgba(26, 26, 26, 1);
+    font-size: min(3.33vw, 18px);
+    font-weight: 500;
+    background: linear-gradient(to right, #9845FF, #18FB9A);
+    border: 0px solid transparent;
+    border-radius: 5px;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+
+@media(max-width: 768px) {
+  .closeModalIconRow {
+    margin-bottom: 8%;
+    padding-top: 16px;
+    padding-right: 46px;
+  }
+  .editProfileImageContainer {
+    max-width: none;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .ctaButton {
+    padding-top: 12px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+  }
+  .toggleFormButtonContainer {
+    margin-top: 6vh;
+  }
+  .toggleFormButton {
+    padding-top: 6px;
+    padding-right: 9px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+  }
+}
